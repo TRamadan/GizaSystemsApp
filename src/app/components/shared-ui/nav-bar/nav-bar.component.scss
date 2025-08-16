@@ -210,14 +210,15 @@
     text-align: start;
     color: white;
     z-index: 2;
-    position: absolute;
+    position: relative;
     bottom: 20px;
-    left: calc(10px + $slideWidth);
+    left: 150px;
     display: flex;
     padding-inline: 4rem;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    top: -190px;
 
     .hero-title {
       font-size: 2.5rem;

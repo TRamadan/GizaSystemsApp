@@ -1,7 +1,3 @@
-.talent-snapshot-section {
-    font-family: Arial, sans-serif;
-}
-
 /* Banner with background image */
 .banner {
     background: url('../../../../assets/talent-snap-shot.png') no-repeat center center/cover;
@@ -26,7 +22,6 @@
     border-radius: 8px;
 }
 
-/* Numbers Section */
 .numbers-section {
     background-color: #1d252d;
 }
@@ -37,7 +32,6 @@
 }
 
 .stat-item {
-    padding: 20px;
     transition: transform 0.2s ease;
 }
 
@@ -60,15 +54,34 @@
     gap: 8px;
 }
 
-.stat-item p {
+
+/* .stat-item p {
     font-size: clamp(0.9rem, 2vw, 1.1rem);
     margin-top: 0.5rem;
-}
+} */
 
 /* Vertical dividers only for large screens */
 @media (min-width: 992px) {
     .border-end-lg {
         border-right: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .col-lg-4:nth-child(3n) .stat-item {
+        border-right: none !important;
+    }
+
+    .col-lg-4:last-child .stat-item {
+        border-right: none !important;
+    }
+
+    .stat-item h2 {
+        justify-content: flex-start;
+    }
+
+    .stat-item p {
+        margin-left: 38px;
+        /* 30px icon width + 8px gap */
+        text-align: left;
     }
 }
 
@@ -89,6 +102,15 @@
 
     .stat-item {
         text-align: center !important;
+    }
+
+    .stat-item h2 {
+        justify-content: center;
+    }
+
+    .stat-item p {
+        text-align: center;
+        margin-left: 0;
     }
 }
 
