@@ -9,6 +9,7 @@ import { ClinetsTestimonialComponent } from './clinets-testimonial/clinets-testi
 import { TalentSnapShotComponent } from './talent-snap-shot/talent-snap-shot.component';
 import { RequestTransformFormComponent } from './request-transform-form/request-transform-form.component';
 import { FooterComponent } from '../shared-ui/Footer/Footer/Footer.component';
+import { NavBarComponent } from '../shared-ui/nav-bar/nav-bar.component';
 
 @Component({
   selector: 'app-home',
@@ -26,6 +27,7 @@ import { FooterComponent } from '../shared-ui/Footer/Footer/Footer.component';
     TalentSnapShotComponent,
     RequestTransformFormComponent,
     FooterComponent,
+    NavBarComponent,
   ],
 })
 export class HomeComponent implements OnInit {

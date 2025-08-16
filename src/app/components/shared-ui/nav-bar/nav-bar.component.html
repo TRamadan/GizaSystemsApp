@@ -1,92 +1,116 @@
-<nav class="sidebar-nav">
-  <div class="sidebar-content">
-    <div class="sidebar-logo">
-      <div class="logo-container">
-        <div class="logo-circle">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
-            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
-            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
-          </svg>
+<!-- app.component.html -->
+<div class="app-container" #sectionRef>
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container-fluid g-0">
+      <div class="row g-0">
+        <div class="col-12 g-0">
+          <header class="d-flex flex-column justify-content-around align-items-center py-3">
+            <img src="assets/images/logo.png" alt="Giza Systems" class="logo-img">
+
+
+            <button class="hamburger" class="hamburger" (click)="toggleSidebar()" [class.active]="isSidebarOpen"
+              aria-label="Menu">
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+            <div class="follow-us"> Follow Us</div>
+
+          </header>
+
+          <section class="hero-section">
+            <div class="hero-content">
+              <h1 class="hero-title">Transform Urban Living with GS Group’s
+                Smart City Command & Control Center </h1>
+              <!-- <p class="hero-subtitle">Powering the future with innovative solutions</p> -->
+              <div class="text-center mb-4">
+                <button class="hero-btn">Schedule Meeting</button>
+              </div>
+
+            </div>
+            <div class="hero-image">
+            </div>
+          </section>
         </div>
-        <span class="logo-text">Giza<br>Systems</span>
       </div>
     </div>
+  </main>
 
-    <div class="menu-toggle-container">
-      <button class="menu-toggle-btn" id="menuToggle">
-        <div class="hamburger-vertical">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+  <!-- Overlay -->
+  <div class="sidebar-overlay" #overlay (click)="onOverlayClick()">
+  </div>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" #sidebar>
+    <div class="sidebar-header">
+      <button class="sidebar-close btn" (click)="toggleSidebar()">
+        <i class="fas fa-times"></i>
       </button>
     </div>
-  </div>
-</nav>
 
-
-<div class="fullscreen-menu" id="fullscreenMenu">
-  <div class="fullscreen-menu-content">
-    <button class="menu-close-btn" id="menuClose">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-      </svg>
-    </button>
-
-    <div class="fullscreen-menu-items">
-      <a href="#" class="fullscreen-menu-link">Home</a>
-      <a href="#" class="fullscreen-menu-link">Services</a>
-      <a href="#" class="fullscreen-menu-link">Solutions</a>
-      <a href="#" class="fullscreen-menu-link">About</a>
-      <a href="#" class="fullscreen-menu-link">Contact</a>
-    </div>
-  </div>
-</div>
-
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-  <div class="container-fluid">
-    <!-- Mobile Menu Toggle -->
-    <button class="navbar-toggler border-0 p-0 me-3" type="button" data-bs-toggle="collapse"
-      data-bs-target="#navbarNav">
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </button>
-
-    <!-- Logo -->
-    <a class="navbar-brand d-flex align-items-center" href="#">
-      <div class="logo-container">
-        <div class="logo-circle">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
-            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
-            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
-          </svg>
-        </div>
-        <span class="logo-text">Giza<br>Systems</span>
-      </div>
-    </a>
-
-    <!-- Collapse Menu -->
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
+    <nav class="sidebar-nav">
+      <ul class="nav-list">
         <li class="nav-item">
-          <a class="nav-link" href="#">Services</a>
+          <a href="#" class="nav-link" (click)="toggleSidebar()">
+            <span class="nav-title">Home</span>
+            <small class="nav-subtitle">Hello!</small>
+          </a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" href="#">Solutions</a>
+          <a href="#" class="nav-link" (click)="toggleSidebar()">
+            <span class="nav-title">About Us</span>
+            <small class="nav-subtitle">All About Us</small>
+          </a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" href="#">About</a>
+          <a href="#" class="nav-link" (click)="toggleSidebar()">
+            <span class="nav-title">Industries & Solutions</span>
+            <small class="nav-subtitle">Our Areas of Expertise</small>
+          </a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
+          <a href="#" class="nav-link" (click)="toggleSidebar()">
+            <span class="nav-title">Careers</span>
+            <small class="nav-subtitle">Join Our Team</small>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link" (click)="toggleSidebar()">
+            <span class="nav-title">Contact Us</span>
+            <small class="nav-subtitle">Reach Out</small>
+          </a>
         </li>
       </ul>
+    </nav>
+
+    <!-- Search Section -->
+    <div class="sidebar-search">
+      <div class="search-container">
+        <input type="text" class="form-control search-input" placeholder="Search">
+        <button class="search-btn btn">
+          <i class="fas fa-search"></i>
+        </button>
+      </div>
     </div>
-  </div>
-</nav>
+
+    <!-- Social Links -->
+    <div class="sidebar-footer">
+      <div class="social-links">
+        <a href="#" class="social-link">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social-link">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="social-link">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </div>
+  </aside>
+</div>
