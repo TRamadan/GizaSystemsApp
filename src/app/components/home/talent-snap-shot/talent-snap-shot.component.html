@@ -10,15 +10,17 @@
   <!-- Numbers Section -->
   <div class="numbers-section text-white py-5">
     <div class="container">
-      <h3 class="text-info mb-5">Our Strengths in Numbers</h3>
+      <h3 class="text-info mb-5 text-center text-lg-start">Our Strengths in Numbers</h3>
       <div class="row g-4">
 
         <!-- Row 1 -->
         @for(item of talentSnapShotData; track item;){
-        <div class="col-12 col-md-6 col-lg-4">
+        <div class="col-12 col-sm-6 col-lg-4">
           <div class="stat-item border-end-lg text-center text-lg-start">
             <i class="bi bi-code-slash text-info fs-3"></i>
-            <h2 class="fw-bold text-info mb-0"><img [src]="item.icon" /> {{item.number}}</h2>
+            <h2 class="fw-bold text-info mb-0">
+              <img [src]="item.icon" class="stat-icon" alt="icon" /> {{item.number}}
+            </h2>
             <p class="mb-0">{{item.text}}</p>
           </div>
         </div>
