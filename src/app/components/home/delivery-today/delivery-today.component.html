@@ -1,24 +1,76 @@
-<div class="container-fluid">
-  <section class="bg-color">
-    <div class="row">
-      <div class="col-md-5 p-0">
-        <img height="450px" src="../../../../assets/delivery-image.png" alt="delivery-image" />
+<section class="capabilities-banner" #bannerContainer>
+  <div class="container-fluid h-100">
+    <div class="row h-100 align-items-center">
+      <!-- Left Side - Earth Globe Image -->
+      <div class="col-lg-6 col-md-5 d-flex justify-content-center align-items-center globe-section" #globeSection>
+        <div class="globe-container" #globeContainer>
+          <div class="globe-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              alt="Digital Earth Globe"
+              class="globe-image"
+              #globeImage
+            >
+            <div class="globe-glow" #globeGlow></div>
+            <div class="orbit-ring orbit-1" #orbit1></div>
+            <div class="orbit-ring orbit-2" #orbit2></div>
+            <div class="orbit-ring orbit-3" #orbit3></div>
+
+            <!-- Floating Data Points -->
+            <div class="data-point point-1" #dataPoint1>
+              <div class="data-dot"></div>
+              <div class="data-pulse"></div>
+            </div>
+            <div class="data-point point-2" #dataPoint2>
+              <div class="data-dot"></div>
+              <div class="data-pulse"></div>
+            </div>
+            <div class="data-point point-3" #dataPoint3>
+              <div class="data-dot"></div>
+              <div class="data-pulse"></div>
+            </div>
+            <div class="data-point point-4" #dataPoint4>
+              <div class="data-dot"></div>
+              <div class="data-pulse"></div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="col-md-6 p-0">
-        <div class="text-holder">
-          <h2 class="text-blue">What We Deliver<br>Today and at Scale</h2>
-          <p>From full-stack development and cybersecurity to business intelligence and agile project management, our
-            GDC
-            spans 560+ professionals across 10+ high-impact service domains.</p>
-          <div class="button-container">
-            <a href="#" class="btn btn-link text-blue text-decoration-none">Download Our Capabilities Profile</a>
-            <button type="button" class="btn btn-outline-primary-custom">Download</button>
+      <!-- Right Side - Content -->
+      <div class="col-lg-6 col-md-7 content-section" #contentSection>
+        <div class="content-wrapper p-4 p-lg-5">
+          <h1 class="display-4 fw-bold text-white mb-4" #mainTitle>
+            What We Deliver Today and at Scale
+          </h1>
+
+          <p class="lead text-white mb-4 content-description" #description>
+            From proof of concept to production deployment, we partner with global leaders to revolutionize their business intelligence and data science capabilities. Our expertise spans across multiple industries, delivering AI-driven solutions that enable intelligent decision-making at scale.
+          </p>
+
+          <div class="cta-section" #ctaSection>
+            <p class="text-white mb-3">Download Our Capabilities Profile</p>
+            <button
+              class="btn btn-primary btn-lg download-btn px-4 py-3"
+              #downloadBtn
+              (click)="onDownload()"
+            >
+              <i class="fas fa-download me-2"></i>
+              Download
+            </button>
           </div>
-
         </div>
-
       </div>
     </div>
-  </section>
-</div>
+  </div>
+
+  <!-- Background Elements -->
+  <div class="bg-particles" #bgParticles>
+    <div class="particle particle-1"></div>
+    <div class="particle particle-2"></div>
+    <div class="particle particle-3"></div>
+    <div class="particle particle-4"></div>
+    <div class="particle particle-5"></div>
+    <div class="particle particle-6"></div>
+  </div>
+</section>

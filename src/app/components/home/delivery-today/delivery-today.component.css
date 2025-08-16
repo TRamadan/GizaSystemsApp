@@ -1,60 +1,426 @@
-.bg-color {
-    background-color: #00A7E1;
+.capabilities-banner {
+  min-height: 400px;
+  height: auto;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 25%, #0f3460 50%, #0e4b99  75%, #2980b9 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 0;
 }
 
-.content-container {
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+.globe-section {
+  position: relative;
+  min-height: 400px;
 }
 
-h2 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: white;
+.globe-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-p {
-    font-size: 27px;
-    color: white;
+.globe-wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.globe-image {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+  z-index: 3;
+  box-shadow:
+    0 0 40px rgba(41, 128, 185, 0.3),
+    0 0 80px rgba(41, 128, 185, 0.2),
+    inset 0 0 40px rgba(0, 0, 0, 0.2);
+  filter: brightness(1.1) contrast(1.2) saturate(1.1);
+}
+
+.globe-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(41, 128, 185, 0.3) 0%, rgba(41, 128, 185, 0.1) 40%, transparent 70%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.orbit-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(41, 128, 185, 0.3);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.orbit-1 {
+  width: 340px;
+  height: 340px;
+  border-color: rgba(41, 128, 185, 0.4);
+}
+
+.orbit-2 {
+  width: 380px;
+  height: 380px;
+  border-color: rgba(41, 128, 185, 0.25);
+}
+
+.orbit-3 {
+  width: 420px;
+  height: 420px;
+  border-color: rgba(41, 128, 185, 0.15);
+}
+
+.data-point {
+  position: absolute;
+  z-index: 4;
+}
+
+.point-1 {
+  top: 15%;
+  right: 20%;
+}
+
+.point-2 {
+  top: 30%;
+  left: 10%;
+}
+
+.point-3 {
+  bottom: 25%;
+  right: 15%;
+}
+
+.point-4 {
+  bottom: 15%;
+  left: 25%;
+}
+
+.data-dot {
+  width: 8px;
+  height: 8px;
+  background: #3498db;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: 0 0 10px #3498db;
+}
+
+.data-pulse {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #3498db;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.content-section {
+  position: relative;
+  z-index: 5;
+}
+
+.content-wrapper {
+  max-width: 600px;
+}
+
+.display-4 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1.5rem;
+}
+
+.content-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cta-section p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.download-btn {
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.download-btn:hover {
+  background: linear-gradient(135deg, #2980b9, #1f5f8b);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(52, 152, 219, 0.4);
+}
+
+.download-btn:active {
+  transform: translateY(-1px);
+}
+
+.download-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.6s;
+}
+
+.download-btn:hover::before {
+  left: 100%;
+}
+
+.bg-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  background: rgba(52, 152, 219, 0.1);
+  border-radius: 50%;
+}
+
+.particle-1 {
+  width: 4px;
+  height: 4px;
+  top: 20%;
+  left: 10%;
+  animation: float1 8s infinite;
+}
+
+.particle-2 {
+  width: 6px;
+  height: 6px;
+  top: 60%;
+  left: 80%;
+  animation: float2 10s infinite;
+}
+
+.particle-3 {
+  width: 3px;
+  height: 3px;
+  top: 30%;
+  left: 70%;
+  animation: float3 7s infinite;
+}
+
+.particle-4 {
+  width: 5px;
+  height: 5px;
+  top: 80%;
+  left: 20%;
+  animation: float1 9s infinite;
+}
+
+.particle-5 {
+  width: 2px;
+  height: 2px;
+  top: 40%;
+  left: 30%;
+  animation: float2 6s infinite;
+}
+
+.particle-6 {
+  width: 4px;
+  height: 4px;
+  top: 70%;
+  left: 60%;
+  animation: float3 11s infinite;
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  33% { transform: translateY(-20px) translateX(10px); }
+  66% { transform: translateY(10px) translateX(-5px); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-30px) translateX(-15px); }
+}
+
+@keyframes float3 {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  25% { transform: translateY(-15px) translateX(8px); }
+  75% { transform: translateY(20px) translateX(-10px); }
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .capabilities-banner {
+    padding: 2rem 0;
+    min-height: auto;
+  }
+
+  .globe-section {
+    min-height: 300px;
     margin-bottom: 2rem;
-    width: 490px;
-}
+  }
 
-.btn-outline-primary-custom {
-    color: #0277BD;
-    border-color: #0277BD;
-}
+  .globe-wrapper {
+    width: 250px;
+    height: 250px;
+  }
 
-.btn-outline-primary-custom:hover {
-    background-color: #0277BD;
-    color: white;
-}
+  .globe-image {
+    width: 220px;
+    height: 220px;
+  }
 
-.button-container {
-    display: flex;
-    gap: 1rem;
+  .globe-glow {
+    width: 260px;
+    height: 260px;
+  }
+
+  .orbit-1 { width: 280px; height: 280px; }
+  .orbit-2 { width: 310px; height: 310px; }
+  .orbit-3 { width: 340px; height: 340px; }
+
+  .display-4 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .content-description {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .cta-section {
+    text-align: center;
+  }
 }
 
 @media (max-width: 768px) {
-    .content-container {
-        padding: 2rem;
-        align-items: stretch;
-        /* Make content full width on smaller screens */
-    }
+  .capabilities-banner {
+    padding: 1.5rem 0;
+  }
 
-    h2 {
-        font-size: 2rem;
-    }
+  .globe-section {
+    min-height: 250px;
+    margin-bottom: 1.5rem;
+  }
 
-    p {
-        font-size: 0.9rem;
-    }
+  .globe-wrapper {
+    width: 200px;
+    height: 200px;
+  }
 
-    .button-container {
-        flex-direction: column;
-        align-items: stretch;
-    }
+  .globe-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  .globe-glow {
+    width: 210px;
+    height: 210px;
+  }
+
+  .orbit-1 { width: 220px; height: 220px; }
+  .orbit-2 { width: 240px; height: 240px; }
+  .orbit-3 { width: 260px; height: 260px; }
+
+  .display-4 {
+    font-size: 1.75rem;
+  }
+
+  .content-wrapper {
+    padding: 1rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .capabilities-banner {
+    padding: 1rem 0;
+  }
+
+  .globe-section {
+    min-height: 200px;
+    margin-bottom: 1rem;
+  }
+
+  .globe-wrapper {
+    width: 160px;
+    height: 160px;
+  }
+
+  .globe-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .globe-glow {
+    width: 170px;
+    height: 170px;
+  }
+
+  .orbit-1 { width: 180px; height: 180px; }
+  .orbit-2 { width: 200px; height: 200px; }
+  .orbit-3 { width: 220px; height: 220px; }
+
+  .display-4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .content-description {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .download-btn {
+    padding: 0.75rem 2rem !important;
+    font-size: 1rem;
+  }
 }
