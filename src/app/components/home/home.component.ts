@@ -8,6 +8,7 @@ import { ClientChoiceComponent } from './client-choice/client-choice.component';
 import { ClinetsTestimonialComponent } from './clinets-testimonial/clinets-testimonial.component';
 import { TalentSnapShotComponent } from './talent-snap-shot/talent-snap-shot.component';
 import { RequestTransformFormComponent } from './request-transform-form/request-transform-form.component';
+import { FooterComponent } from '../shared-ui/Footer/Footer/Footer.component';
 
 @Component({
   selector: 'app-home',
@@ -24,6 +25,7 @@ import { RequestTransformFormComponent } from './request-transform-form/request-
     ClinetsTestimonialComponent,
     TalentSnapShotComponent,
     RequestTransformFormComponent,
+    FooterComponent,
   ],
 })
 export class HomeComponent implements OnInit {
