@@ -1,0 +1,60 @@
+.bg-color {
+    background-color: #00A7E1;
+}
+
+.content-container {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+p {
+    font-size: 27px;
+    color: white;
+    margin-bottom: 2rem;
+    width: 490px;
+}
+
+.btn-outline-primary-custom {
+    color: #0277BD;
+    border-color: #0277BD;
+}
+
+.btn-outline-primary-custom:hover {
+    background-color: #0277BD;
+    color: white;
+}
+
+.button-container {
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        padding: 2rem;
+        align-items: stretch;
+        /* Make content full width on smaller screens */
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}

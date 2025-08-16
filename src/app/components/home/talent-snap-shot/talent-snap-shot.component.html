@@ -1,0 +1,29 @@
+<div class="talent-snapshot-section">
+
+  <!-- Top banner -->
+  <div class="banner text-white d-flex align-items-center">
+    <div class="container py-5 position-relative">
+      <h2 class="fw-light bg-title">Talent Snapshot</h2>
+    </div>
+  </div>
+
+  <!-- Numbers Section -->
+  <div class="numbers-section text-white py-5">
+    <div class="container">
+      <h3 class="text-info mb-5">Our Strengths in Numbers</h3>
+      <div class="row g-4">
+
+        <!-- Row 1 -->
+        @for(item of talentSnapShotData; track item;){
+        <div class="col-12 col-md-6 col-lg-4">
+          <div class="stat-item border-end-lg text-center text-lg-start">
+            <i class="bi bi-code-slash text-info fs-3"></i>
+            <h2 class="fw-bold text-info mb-0"><img [src]="item.icon" /> {{item.number}}</h2>
+            <p class="mb-0">{{item.text}}</p>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

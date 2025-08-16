@@ -1,0 +1,35 @@
+.talent-snapshot-section {
+    font-family: Arial, sans-serif;
+}
+
+.banner {
+    background: url('../../../../assets/talent-snap-shot.png') no-repeat center center/cover;
+    min-height: 100vh;
+}
+
+.numbers-section {
+    background-color: #1d252d;
+    /* Dark background */
+}
+
+.bg-title {
+    position: absolute;
+    top: 20rem;
+    left: -4rem;
+}
+
+.stat-item {
+    padding: 10px 20px;
+}
+
+p {
+    font-size: 25px;
+    margin-left: 45px;
+}
+
+/* Vertical dividers only for large screens */
+@media (min-width: 992px) {
+    .border-end-lg {
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+    }
+}

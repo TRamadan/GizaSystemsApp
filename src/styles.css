@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: 'TT Norms Pro';
+    src: url('./assets/fonts/TT\ Norms\ Pro\ Serif\ Trial\ Normal.ttf') format("truetype");
+}
+
+* {
+    font-family: 'TT Norms Pro';
+}

@@ -1,0 +1,110 @@
+<div class="container p-4">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h4 class="section-title my-5">
+        Testimonials Client Results
+      </h4>
+    </div>
+  </div>
+
+
+  <div class="row g-4">
+    @for(t of testimonials; track t;){
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card h-100 shadow-sm p-5 d-flex flex-column">
+
+        <!-- Stars -->
+        <div class="mb-2 text-danger">
+          @for(star of [].constructor(t.rating); track star) {
+          <ng-container>
+            ★
+          </ng-container>
+          }
+
+          @for(star of [].constructor(5 - t.rating); track star){
+          <ng-container>
+            ☆
+          </ng-container>
+          }
+        </div>
+
+        <!-- Feedback -->
+        <p class="flex-grow-1">"{{ t.feedback }}"</p>
+
+        <!-- Name & Company fixed at bottom -->
+        <div class="d-flex align-items-center mt-auto">
+          <div class="rounded-circle bg-dark me-2" style="width: 32px; height: 32px;"></div>
+          <div>
+            <strong>{{ t.name }}</strong><br>
+            <small class="text-secondary">{{ t.company }}</small>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    }
+  </div>
+
+
+
+  <div class="row mt-4">
+    <div class="col-md-12 text-center">
+      <h4 class="section-title">
+        From Efficiency Gains to Strategic Growth
+      </h4>
+    </div>
+  </div>
+
+
+  <div class="container py-5">
+    <section class="overflow-hidden">
+
+      <div class="carousel-container position-relative overflow-hidden p-4 p-md-5 rounded-4"
+        (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+        <!-- Main carousel content -->
+        <div class="row g-3 g-md-4 justify-content-center">
+          @for(superstar of getVisibleSlides(); track superstar.id; let i = $index){
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card shadow-lg border-0 h-100 slide-card" [class.center-slide]="i === 1 && itemsPerSlide === 3"
+              [class.side-slide]="i !== 1 && itemsPerSlide === 3">
+              <!-- Card Image -->
+              <div class="position-relative">
+                <img [src]="superstar.image" alt="test" class="card-img-top object-fit-cover" style="height: 250px" />
+
+              </div>
+
+              <!-- Card Body -->
+              <div class="card-body p-4">
+                <h3 class="card-title h4 fw-bold text-dark mb-2">
+                  sf;ll;f {{ i + 1}}
+                </h3>
+                <p class="text-primary fw-semibold mb-2">a,em,m,smf {{ i + 1}}</p>
+              </div>
+            </div>
+          </div>
+          }
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button type="button" class="border-0 previous-button position-absolute start-0 top-50 translate-middle-y ms-2"
+          (click)="prevSlide()" aria-label="Previous slide">
+          <img src="../../../../assets/previous.png" />
+        </button>
+
+        <button type="button" class="border-0 next-button position-absolute end-0 top-50 translate-middle-y me-2 "
+          (click)="nextSlide()" aria-label="Next slide">
+          <img src="../../../../assets/next.png" />
+        </button>
+
+        <!-- Progress Indicators -->
+        <div class="d-flex justify-content-center mt-5 gap-2">
+          @for(superstar of superStars; track superstar.id; let i = $index){
+          <button type="button" class="btn p-0 indicator-btn" [class.active]="i === currentSlide" (click)="goToSlide(i)"
+            [attr.aria-label]="'Go to slide ' + (i + 1)"></button>
+          }
+        </div>
+      </div>
+    </section>
+  </div>
+
+</div>

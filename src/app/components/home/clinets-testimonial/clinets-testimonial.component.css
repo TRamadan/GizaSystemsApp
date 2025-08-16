@@ -1,0 +1,233 @@
+.section-title {
+    color: #00A7E1;
+    font-size: 2rem;
+    /* default mobile size */
+    font-weight: 700;
+}
+
+/* Card styles */
+.card {
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* Feedback text */
+.card p {
+    color: #19191B;
+    line-height: 1.8rem;
+    font-size: 1rem;
+    /* base mobile size */
+}
+
+/* Reviewer name */
+.card strong {
+    font-size: 1rem;
+}
+
+/* Reviewer company */
+.card small {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    flex: 0 0 30%;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    border: none;
+}
+
+/* Middle card zoom effect */
+.carousel-item .card:nth-child(2) {
+    transform: scale(1.1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border: 2px solid #00A7E1;
+}
+
+
+
+
+
+
+/* --- Responsive font sizes --- */
+@media (min-width: 576px) {
+
+    /* Small devices (≥576px) */
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .card p {
+        font-size: 1.05rem;
+    }
+
+    .card strong {
+        font-size: 1.05rem;
+    }
+
+    .card {
+        flex: 0 0 90%;
+    }
+
+    .carousel-item .card:nth-child(2) {
+        transform: scale(1.02);
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    /* Medium devices (≥768px) */
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .card p {
+        font-size: 1.1rem;
+    }
+
+    .card strong {
+        font-size: 1.1rem;
+    }
+}
+
+@media (min-width: 992px) {
+
+    /* Large devices (≥992px) */
+    .section-title {
+        font-size: 2.8rem;
+    }
+
+    .card p {
+        font-size: 1.15rem;
+        line-height: 2rem;
+    }
+
+    .card strong {
+        font-size: 1.15rem;
+    }
+
+    .card {
+        flex: 0 0 45%;
+    }
+
+    .carousel-item .card:nth-child(2) {
+        transform: scale(1.05);
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    /* Extra large devices (≥1200px) */
+    .section-title {
+        font-size: 3rem;
+    }
+
+    .card p {
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+    }
+
+    .card strong {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+/* Card animations and transforms */
+.slide-card {
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
+}
+
+.next-button, .previous-button {
+    background: transparent;
+    z-index: 10000;
+
+}
+
+
+
+.slide-card:hover {
+    transform: scale(1.05) !important;
+    z-index: 10;
+}
+
+/* Center slide emphasis (for desktop 3-column layout) */
+.center-slide {
+    /* transform: scale(1.1); */
+    z-index: 5;
+}
+
+.side-slide {
+    transform: scale(0.95);
+}
+
+/* Navigation buttons */
+.nav-btn {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+.nav-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn i {
+    font-size: 1.125rem;
+}
+
+/* Progress indicators */
+.indicator-btn {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #d1d5db;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.indicator-btn:hover {
+    background-color: #9ca3af;
+}
+
+.indicator-btn.active {
+    width: 2rem;
+    border-radius: 1rem;
+    background-color: #2563eb;
+}
+
+/* Card specific styling */
+.card {
+    border-radius: 1rem !important;
+    overflow: hidden;
+}
+
+.card-img-top {
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05);
+}

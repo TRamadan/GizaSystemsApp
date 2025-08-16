@@ -1,0 +1,26 @@
+<div class="container my-5">
+  <div class="row">
+    @for(item of allStrategies; track item;){
+    <div class="col-md-6 mb-3">
+      <div class="card">
+        <img [src]="item.img" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{item.title}}</h5>
+          <p class="card-text">{{item.description}}.</p>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+
+  <div class="row my-4">
+    <div class="col-md-12 text-center">
+      <span>
+        Find out more about our Strategy as a Service
+      </span>
+      <button class="btn download-button">
+        Download Now
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,233 @@
+  .data-highlights {
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .section-header {
+      background-color: #00A7E1;
+      padding: 40px 0;
+      text-align: center;
+  }
+
+  .section-title {
+      font-size: 3rem;
+      font-weight: 300;
+      color: white;
+      margin: 0;
+      letter-spacing: 1px;
+  }
+
+  .stats-container {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 60px 0;
+  }
+
+  .stat-item {
+      text-align: center;
+      margin-bottom: 50px;
+      transition: transform 0.3s ease;
+  }
+
+  .stat-item:hover {
+      transform: translateY(-10px);
+  }
+
+  .stat-number {
+      font-size: 4rem;
+      font-weight: 300;
+      color: #00a7e1;
+      line-height: 1;
+      margin-bottom: 15px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .stat-label {
+      background-color: #4a4a4a;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 25px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      display: inline-block;
+      min-width: 200px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+  }
+
+  .stat-item:hover .stat-label {
+      background-color: #3a3a3a;
+      transform: scale(1.05);
+  }
+
+  /* Special styling for different stat types */
+  .stat-percentage .stat-number {
+      font-size: 3.5rem;
+  }
+
+  .stat-rank .stat-number {
+      font-size: 3.5rem;
+      font-weight: 400;
+  }
+
+  .stat-large-number .stat-number {
+      font-size: 3.5rem;
+  }
+
+  /* Row spacing */
+  .stats-row {
+      margin-bottom: 40px;
+  }
+
+  .stats-row:last-child {
+      margin-bottom: 0;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+      .stat-number {
+          font-size: 3.5rem;
+      }
+
+      .stat-percentage .stat-number,
+      .stat-rank .stat-number {
+          font-size: 4rem;
+      }
+
+      .stat-large-number .stat-number {
+          font-size: 3rem;
+      }
+  }
+
+  @media (max-width: 992px) {
+      .section-title {
+          font-size: 2.5rem;
+      }
+
+      .stat-number {
+          font-size: 3rem;
+      }
+
+      .stat-percentage .stat-number,
+      .stat-rank .stat-number {
+          font-size: 3.5rem;
+      }
+
+      .stat-large-number .stat-number {
+          font-size: 2.8rem;
+      }
+
+      .stat-item {
+          margin-bottom: 40px;
+      }
+  }
+
+  @media (max-width: 768px) {
+      .data-highlights {
+          min-height: auto;
+      }
+
+      .section-header {
+          padding: 30px 0;
+      }
+
+      .section-title {
+          font-size: 2.2rem;
+      }
+
+      .stats-container {
+          padding: 40px 0;
+      }
+
+      .stat-number {
+          font-size: 2.5rem;
+      }
+
+      .stat-percentage .stat-number,
+      .stat-rank .stat-number {
+          font-size: 3rem;
+      }
+
+      .stat-large-number .stat-number {
+          font-size: 2.3rem;
+      }
+
+      .stat-label {
+          font-size: 0.9rem;
+          padding: 10px 18px;
+          min-width: 180px;
+      }
+
+      .stat-item {
+          margin-bottom: 35px;
+      }
+
+      .stats-row {
+          margin-bottom: 20px;
+      }
+  }
+
+  @media (max-width: 576px) {
+      .section-title {
+          font-size: 1.8rem;
+      }
+
+      .stat-number {
+          font-size: 2.2rem;
+      }
+
+      .stat-percentage .stat-number,
+      .stat-rank .stat-number {
+          font-size: 2.5rem;
+      }
+
+      .stat-large-number .stat-number {
+          font-size: 2rem;
+      }
+
+      .stat-label {
+          font-size: 0.85rem;
+          padding: 8px 15px;
+          min-width: 160px;
+      }
+
+      .stats-container {
+          padding: 30px 0;
+      }
+  }
+
+  /* Animation for numbers on scroll */
+  @keyframes countUp {
+      from {
+          opacity: 0;
+          transform: translateY(20px);
+      }
+
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  .stat-item {
+      animation: countUp 0.8s ease-out;
+  }
+
+  .stat-item:nth-child(1) {
+      animation-delay: 0.1s;
+  }
+
+  .stat-item:nth-child(2) {
+      animation-delay: 0.2s;
+  }
+
+  .stat-item:nth-child(3) {
+      animation-delay: 0.3s;
+  }
+
+  .stat-item:nth-child(4) {
+      animation-delay: 0.4s;
+  }
