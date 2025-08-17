@@ -15,15 +15,14 @@
 }
 
 .content-section {
-    height: 100vh;
     display: flex;
     align-items: center;
 }
 
 .image-section img {
     width: 100%;
-    height: 100vh;
     object-fit: cover;
+    aspect-ratio: 1;
 }
 
 h1 {
@@ -46,6 +45,33 @@ p {
     font-size: 1.25rem;
     font-weight: 400;
 }
+
+@media (max-width:1024px) {
+    .content-section, .image-section img {
+        height: auto;
+    }
+
+
+    .inner-wrapper {
+        flex-direction: column !important;
+
+    }
+
+    .text-wrapper {
+        width: 100%;
+        height: fit-content !important;
+    }
+
+    .image-section {
+        width: 100%;
+
+        & img {
+            width: 100%;
+        }
+    }
+}
+
+
 
 @media (max-width: 767px) {
     .content-section, .image-section img {
