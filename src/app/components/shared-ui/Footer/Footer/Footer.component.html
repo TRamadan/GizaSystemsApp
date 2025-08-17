@@ -1,148 +1,218 @@
-<footer class="footer-section bg-dark text-white py-5" #footerContainer>
+<footer class="footer">
   <div class="container">
-    <!-- Header Section -->
-    <div class="row mb-5">
+    <div class="row">
       <div class="col-12">
-        <h2 class="display-6 mb-4" #headerTitle>Need More Information or Want to Get in Touch?</h2>
-        <div class="social-links d-flex align-items-center gap-3" #socialLinks>
-          <span class="text-light">Get in touch</span>
-          <div class="social-icons d-flex gap-2">
-            <a href="#" class="social-icon facebook" aria-label="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="social-icon linkedin" aria-label="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="#" class="social-icon twitter" aria-label="Twitter">
-              <i class="fab fa-x-twitter"></i>
-            </a>
-          </div>
+        <h2>Need More Information or Want to Get in Touch?</h2>
+        <ul class="soical-links">
+          <li><a href="https://www.facebook.com/GizaSystemsOfficial" target="_blank"><i
+                class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/giza-systems" target="_blank"><i
+                class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="https://twitter.com/Giza_Systems" target="_blank"><svg version="1.1" id="svg5"
+                xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1668.56 1221.19"
+                style="enable-background:new 0 0 1668.56 1221.19;" xml:space="preserve">
+                <g id="layer1" transform="translate(52.390088,-25.058597)">
+                  <path id="path1009"
+                    d="M283.94,167.31l386.39,516.64L281.5,1104h87.51l340.42-367.76L984.48,1104h297.8L874.15,558.3l361.92-390.99h-87.51l-313.51,338.7l-253.31-338.7H283.94z M412.63,231.77h136.81l604.13,807.76h-136.81L412.63,231.77z">
+                  </path>
+                </g>
+              </svg></a></li>
+        </ul><a href="contact.html" class="link">Get in Touch</a>
+      </div>
+      <div class="footer-cta pt-5 pb-5 col-12">
+        <div class="row">
+          <div class="col-xl-4 col-md-4 mb-30"><a class="single-cta" href="mailto:sales.support@gizasystems.com"
+              target="_blank" style="cursor:pointer"><i class="far fa-envelope-open"></i>
+              <div class="cta-text">
+                <h4>Email Us</h4><span>{{'sales.support@gizasystems.com'}}</span>
+              </div>
+            </a></div>
+          <div class="col-xl-4 col-md-4 mb-30"><a class="single-cta" href="tel:+20226146000" target="_blank"
+              style="cursor:pointer"><i class="fas fa-phone"></i>
+              <div class="cta-text">
+                <h4>Call Us</h4><span>+202 261 46000</span>
+              </div>
+            </a></div>
+          <div class="col-xl-4 col-md-4 mb-30"><a class="single-cta" href="https://maps.app.goo.gl/kivUkBVYUcRbD3TE8"
+              target="_blank" style="cursor:pointer"><i class="fas fa-map-marker-alt"></i>
+              <div class="cta-text">
+                <h4>Find Us</h4><span>Plot 176, Second Sector, City Center New Cairo, Egypt</span>
+              </div>
+            </a></div>
         </div>
       </div>
     </div>
+  </div>
+</footer>
 
-    <!-- Main Content Row -->
-    <div class="row g-4">
-      <!-- Contact Information -->
-      <div class="col-lg-12 col-md-6" #contactSection>
-        <div class="contact-info">
-          <div class="contact-item mb-4">
-            <div class="d-flex  align-items-start gap-3">
-              <div class="contact-icon">
-                <i class="fas fa-envelope text-light"></i>
-              </div>
-              <div>
-                <h5 class="mb-1">Email Us</h5>
-                <a href="mailto:sales.egypt@gizasystems.com" class="text-light text-decoration-none">
-                 {{' sales.egypt@gizasystems.com'}}
-                </a>
-              </div>
+<footer class="footer-section">
+  <div class="container">
+    <div class="footer-content pt-5 pb-5">
+      <div class="row">
+        <div class="col-xl-2 col-lg-2 col-md-6 mb-30">
+          <div class="footer-widget">
+            <div class="footer-widget-heading">
+              <h3>Quick Links</h3>
             </div>
-          </div>
-
-          <div class="contact-item mb-4">
-            <div class="d-flex align-items-start gap-3">
-              <div class="contact-icon">
-                <i class="fas fa-phone text-light"></i>
-              </div>
-              <div>
-                <h5 class="mb-1">Call Us</h5>
-                <a href="tel:+20216660" class="text-light text-decoration-none">
-                  +202 216660
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="d-flex align-items-start gap-3">
-              <div class="contact-icon">
-                <i class="fas fa-map-marker-alt text-light"></i>
-              </div>
-              <div>
-                <h5 class="mb-1">Find Us</h5>
-                <p class="text-light mb-0">
-                  Plot 51A, Second Sector, City Center New Cairo, Egypt
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <hr class="w-100">
-      <!-- Quick Links & Subsidiaries -->
-      <div class="col-lg-7 col-md-12" #linksSection>
-        <div class="row g-4">
-          <!-- Quick Links -->
-          <div class="col-md-5">
-            <h5 class="mb-3 text-primary">Quick Links</h5>
-            <ul class="list-unstyled footer-links">
-              <li><a href="#" class="text-light text-decoration-none">About solutions by GSE</a></li>
-              <li><a href="#" class="text-light text-decoration-none">About Giza Systems</a></li>
-              <li><a href="#" class="text-light text-decoration-none">Industries</a></li>
-              <li><a href="#" class="text-light text-decoration-none">Partnerships</a></li>
-              <li><a href="#" class="text-light text-decoration-none">Media Kit</a></li>
-              <li><a href="#" class="text-light text-decoration-none">Events</a></li>
-              <li><a href="#" class="text-light text-decoration-none">News</a></li>
+            <ul id="footer-links">
+              <li><a href="https://solutions.com.sa/">About solutions by stc</a></li>
+              <li><a href="about.html">About Giza Systems</a></li>
+              <li><a href="industries.html">Industries</a></li>
+              <li><a href="publications.html">Publications</a></li>
+              <li><a href="media-kit.html">Media Kit</a></li>
+              <li><a href="events.html">Events</a></li>
+              <li><a href="news.html">News</a></li>
             </ul>
           </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 mb-50">
+          <div class="footer-widget">
+            <div class="footer-widget-heading">
+              <h3><a>Our Subsidiaries</a></h3>
+            </div>
+            <div class="swiper-container sub-slider-footer swiper-initialized swiper-horizontal">
+              <div class="subsidiaries-slideshow swiper-wrapper align-items-center"
+                id="swiper-wrapper-c9910e0210a912582c" aria-live="off"
+                style="transition-duration: 0ms; transform: translate3d(-2768px, 0px, 0px);">
+                <div class="swiper-slide" role="group" aria-label="1 / 15"
+                  style="width: 190.667px; margin-right: 40px;">
+                  <a href="index.html" target="_blank">
+                    <img src="storage/subsidiaries/sub7.png" alt="GIzaAribia" loading="lazy">
+                  </a>
+                </div>
 
-          <!-- Our Subsidiaries -->
-          <div class="col-md-7">
-            <h5 class="mb-3 text-primary">Our Subsidiaries</h5>
-            <div class="subsidiaries-logos">
-              <div class="subsidiary-item mb-3">
-                <img src="assets/images/logo.png" alt="Giza Systems TELECOMS" class="subsidiary-logo">
-              </div>
-              <div class="subsidiary-item mb-3">
-                <img src="assets/images/logo.png" alt="Giza Systems VENTURES" class="subsidiary-logo">
-              </div>
-              <div class="subsidiary-item mb-3">
-                <img src="assets/images/logo.png" alt="Giza Systems GIZA SCAN" class="subsidiary-logo">
-              </div>
+                <div class="swiper-slide" role="group" aria-label="2 / 15"
+                  style="width: 190.667px; margin-right: 40px;">
+                  <a href="index.html" target="_blank">
+                    <img src="storage/subsidiaries/sub21.png" alt="GSKenya" loading="lazy">
+                  </a>
+                </div>
+
+                <div class="swiper-slide" role="group" aria-label="3 / 15"
+                  style="width: 190.667px; margin-right: 40px;">
+                  <a href="index.html" target="_blank">
+                    <img src="storage/subsidiaries/sub25.png" alt="GSTanzania" loading="lazy">
+                  </a>
+                </div>
+
+                <div class="swiper-slide" role="group" aria-label="4 / 15"
+                  style="width: 190.667px; margin-right: 40px;">
+                  <a href="index.html" target="_blank">
+                    <img src="storage/subsidiaries/sub17.png" alt="GSGulf" loading="lazy">
+                  </a>
+                </div>
+
+                <div class="swiper-slide" role="group" aria-label="5 / 15"
+                  style="width: 190.667px; margin-right: 40px;">
+                  <a href="index.html" target="_blank">
+                    <img src="storage/subsidiaries/sub15.png" alt="GSFreeZone" loading="lazy">
+                  </a>
+                </div>
+
+                <div class="swiper-slide" role="group" aria-label="6 / 15"
+                  style="width: 190.667px; margin-right: 40px;">
+                  <a href="index.html" target="_blank">
+                    <img src="storage/subsidiaries/sub5.png" alt="GSDMCC" loading="lazy">
+                  </a>
+                </div>
+
+                <div class="swiper-slide" role="group" aria-label="7 / 15"
+                  style="width: 190.667px; margin-right: 40px;">
+                  <a href="index.html" target="_blank">
+                    <img src="storage/subsidiaries/sub27.png" alt="GsUganda" loading="lazy">
+                  </a>
+                </div>
+
+                <div class="swiper-slide" role="group" aria-label="8 / 15"
+                  style="width: 190.667px; margin-right: 40px;">
+                  <a href="https://www.gizafoundation.com/" target="_blank">
+                    <img src="storage/subsidiaries/1df9386b-8925-4c9e-9fb7-a1ecc4569184.png" alt="GSFoundation"
+                      loading="lazy">
+                  </a>
+                </div>
+
+                <div class="swiper-slide" role="group" aria-label="9 / 15"
+                  style="width: 190.667px; margin-right: 40px;">
+                  <a href="https://www.vas-eg.com/" target="_blank">
+                    <img src="storage/subsidiaries/sub29.png" alt="VAS" loading="lazy">
+                  </a>
+                </div>
+
+                <div class="swiper-slide" role="group" aria-label="10 / 15"
+                  style="width: 190.667px; margin-right: 40px;">
+                  <a href="https://jafeer.com/" target="_blank">
+                    <img src="storage/subsidiaries/sub19.png" alt="Jaffer" loading="lazy">
+                  </a>
+                </div>
+
+                <div class="swiper-slide" role="group" aria-label="11 / 15"
+                  style="width: 190.667px; margin-right: 40px;">
+                  <a href="https://ariatechnologies.com/" target="_blank">
+                    <img src="storage/subsidiaries/1d706a63-03d2-4050-9668-10dff135cd73.png" alt="Aria" loading="lazy">
+                  </a>
+                </div>
+
+                <div class="swiper-slide swiper-slide-prev" role="group" aria-label="12 / 15"
+                  style="width: 190.667px; margin-right: 40px;">
+                  <a href="https://www.gsd.com.eg/" target="_blank">
+                    <img src="storage/subsidiaries/sub12.png" alt="GSD" loading="lazy">
+                  </a>
+                </div>
+
+                <div class="swiper-slide swiper-slide-active" role="group" aria-label="13 / 15"
+                  style="width: 190.667px; margin-right: 40px;">
+                  <a href="index.html" target="_blank">
+                    <img src="../../../../../assets/footer-img-1.png" alt="GESC" loading="lazy">
+                  </a>
+                </div>
+
+                <div class="swiper-slide swiper-slide-next" role="group" aria-label="14 / 15"
+                  style="width: 190.667px; margin-right: 40px;">
+                  <a href="https://www.avidbeam.com/" target="_blank">
+                    <img src="../../../../../assets/sub3.png" alt="Avidbeam" loading="lazy">
+                  </a>
+                </div>
+
+                <div class="swiper-slide" role="group" aria-label="15 / 15"
+                  style="width: 190.667px; margin-right: 40px;">
+                  <a href="https://www.labs-is.com/home/en" target="_blank">
+                    <img src="../../../../../assets/sub4.png" alt="" loading="lazy">
+                  </a>
+                </div>
+              </div><span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+          <div class="footer-widget">
+            <div class="footer-widget-heading">
+              <h3>Subscribe to Our Newsletter</h3>
+            </div>
+            <div class="footer-text mb-25">
+              <p>Subscribe to our newsletter to get the latest updates</p>
+            </div>
+            <div class="subscribe-form">
+              <form id="subscribe-form" action="https://gizasystems.com/api/subscribe" method="post"
+                data-success-message="Thank you for subscribing."
+                data-error-message="Something went wrong. Please try again later."><input type="email" name="email"
+                  placeholder="Email Address" required="" pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$"
+                  title="Please enter a valid email address"><button type="submit"><i
+                    class="fab fa-telegram-plane"></i></button></form>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- Newsletter Subscription -->
-      <div class="offset-lg-2 col-lg-3 col-md-12" #newsletterSection>
-        <h5 class="mb-3 text-primary">Subscribe to Our Newsletter</h5>
-        <p class="text-light mb-3">Subscribe to our newsletter to get the latest updates</p>
-
-        <form [formGroup]="newsletterForm" (ngSubmit)="onSubscribe()" class="newsletter-form">
-          <div class="input-group">
-            <input
-              type="email"
-              class="form-control newsletter-input"
-              placeholder="Email Address"
-              formControlName="email"
-              [class.is-invalid]="isNewsletterEmailInvalid()"
-            >
-            <button
-              type="submit"
-              class="btn btn-primary newsletter-btn"
-              [disabled]="newsletterForm.invalid || isSubscribing"
-            >
-              <i class="fas fa-paper-plane" *ngIf="!isSubscribing"></i>
-              <span class="spinner-border spinner-border-sm" *ngIf="isSubscribing"></span>
-            </button>
-          </div>
-          <div class="invalid-feedback d-block" *ngIf="isNewsletterEmailInvalid()">
-            <small *ngIf="newsletterForm.get('email')?.errors?.['required']">Email is required</small>
-            <small *ngIf="newsletterForm.get('email')?.errors?.['email']">Please enter a valid email</small>
-          </div>
-        </form>
-      </div>
     </div>
-
-    <!-- Copyright -->
-    <div class="row mt-5 pt-4 border-top border-secondary">
-      <div class="col-12">
-        <p class="text-center text-muted mb-0" #copyright>
-          Copyright © Giza Systems Egypt, 2024. All rights reserved.
-        </p>
+  </div>
+  <div class="copyright-area">
+    <div class="container">
+      <div class="row align-items-center text-center">
+        <div class="col-12 text-center text-lg-left">
+          <div class="copyright-text">
+            <p class="text-center">Copyright © Giza Systems, Egypt, 2024. All rights reserved.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -20,7 +20,7 @@ import gsap from 'gsap';
   standalone: true,
   imports: [FormsModule, ReactiveFormsModule, NgFor, NgIf],
   templateUrl: './Footer.component.html',
-  styleUrl: './Footer.component.scss',
+  styleUrl: './Footer.component.css',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FooterComponent implements OnInit, AfterViewInit {

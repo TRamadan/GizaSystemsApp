@@ -57,23 +57,20 @@
 
 
   <div class="container py-5">
-    <section class="overflow-hidden">
+    <!-- <section class="overflow-hidden">
 
       <div class="carousel-container position-relative overflow-hidden p-4 p-md-5 rounded-4"
         (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
-        <!-- Main carousel content -->
         <div class="row g-3 g-md-4 justify-content-center">
           @for(superstar of getVisibleSlides(); track superstar.id; let i = $index){
           <div class="col-12 col-md-6 col-lg-4">
             <div class="card shadow-lg border-0 h-100 slide-card" [class.center-slide]="i === 1 && itemsPerSlide === 3"
               [class.side-slide]="i !== 1 && itemsPerSlide === 3">
-              <!-- Card Image -->
               <div class="position-relative">
                 <img [src]="superstar.image" alt="test" class="card-img-top object-fit-cover" style="height: 250px" />
 
               </div>
 
-              <!-- Card Body -->
               <div class="card-body p-4">
                 <h3 class="card-title h4 fw-bold text-dark mb-2">
                   sf;ll;f {{ i + 1}}
@@ -85,7 +82,6 @@
           }
         </div>
 
-        <!-- Navigation Buttons -->
         <button type="button" class="border-0 previous-button position-absolute start-0 top-50 translate-middle-y ms-2"
           (click)="prevSlide()" aria-label="Previous slide">
           <img src="../../../../assets/previous.png" />
@@ -96,7 +92,6 @@
           <img src="../../../../assets/next.png" />
         </button>
 
-        <!-- Progress Indicators -->
         <div class="d-flex justify-content-center mt-5 gap-2">
           @for(superstar of superStars; track superstar.id; let i = $index){
           <button type="button" class="btn p-0 indicator-btn" [class.active]="i === currentSlide" (click)="goToSlide(i)"
@@ -104,7 +99,7 @@
           }
         </div>
       </div>
-    </section>
+    </section> -->
   </div>
 
 </div>
