@@ -15,6 +15,13 @@
     overflow: hidden;
   }
 
+  ._header_content{
+  transform: translateY(-1%);object-fit: cover;
+        aspect-ratio: 16/9;
+        height: 100vh;
+        width: 100%;
+}
+
   // Header
   header {
     position: relative;
