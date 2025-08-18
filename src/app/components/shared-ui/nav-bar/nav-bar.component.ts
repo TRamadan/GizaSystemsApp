@@ -22,8 +22,8 @@ export class NavBarComponent implements OnInit {
 
   ngAfterViewInit() {
     // Initially hide the sidebar off-screen
-    gsap.set(this.sidebar.nativeElement, { x: '100%' });
-    gsap.set(this.overlay.nativeElement, { opacity: 0, display: 'none' });
+    // gsap.set(this.sidebar.nativeElement, { x: '100%' });
+    // gsap.set(this.overlay.nativeElement, { opacity: 0, display: 'none' });
   }
 
   toggleSidebar() {

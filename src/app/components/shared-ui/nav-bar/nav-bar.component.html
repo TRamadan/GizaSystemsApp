@@ -1,127 +1,178 @@
-<!-- app.component.html -->
-<div class="app-container" #sectionRef>
-  <main class="main-content">
-    <div class="container-fluid g-0">
-      <div class="row g-0">
-        <div class="col-12 g-0">
-          <header class="d-flex flex-column justify-content-around align-items-center py-3">
-            <img src="../../../../assets/giza-white.png" alt="Giza Systems" class="logo-img">
-            <button class="hamburger" class="hamburger" (click)="toggleSidebar()" [class.active]="isSidebarOpen"
-              aria-label="Menu">
-              <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-              </span>
-            </button>
-            <div class="follow-us"> Follow Us</div>
+<div class="preloader">
+  <div class="layer"></div>
+  <div class="inner">
+    <figure><img src="assets/landing/images/giza-load.gif" alt="Image"></figure>
+  </div>
+</div>
 
-          </header>
+<div class="page-transition">
+  <div class="layer"></div>
+</div>
+<!-- end page-transition -->
 
-          <section class="hero-section">
-            <h1 class="top-left-text">From Egypt to The World</h1>
-            <h3 class="top-left-sub">
-              Introducing Giza Systems’ Global Delivery Center: your
-              strategic partner for agile, scalable, and cost-effective
-              service delivery
-            </h3>
-            <!-- <div class="hero-content">
-              <h1 class="hero-title">From Egypt to The World <br>
-                <p class="mt-2">
-                  Introducing Giza Systems’ Global Delivery Center: your
-                  strategic partner for agile, scalable, and cost-effective
-                  service delivery
-                </p>
-              </h1>
+<div id="_nav_layout"></div>
+<!-- end Header - Navigation Links Layout -->
 
+<div id="_social_layout"></div>
+<!-- end Header - Social Links Layout -->
 
+<div id="_search_layout"></div>
+<!-- end Header - Search Layout -->
 
-            </div> -->
-            <div class="text-center mb-4">
-              <button class="hero-btn bottom-right-button">Request a Meeting</button>
-            </div>
-            <div class="hero-image">
-            </div>
-          </section>
-
-
-        </div>
-      </div>
+<main class="version3">
+  <div class="row header">
+    <div class="all-cases-link">
+      <span class="text-white">Search</span>
+      <b>
+        <svg fill="#000000" height="32px" width="32px" version="1.1" id="search" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" xml:space="preserve">
+          <g>
+            <path
+              d="M20.031,20.79c0.46,0.46,1.17-0.25,0.71-0.7l-3.75-3.76c1.27-1.41,2.04-3.27,2.04-5.31 c0-4.39-3.57-7.96-7.96-7.96s-7.96,3.57-7.96,7.96c0,4.39,3.57,7.96,7.96,7.96c1.98,0,3.81-0.73,5.21-1.94L20.031,20.79z M4.11,11.02c0-3.84,3.13-6.96,6.96-6.96c3.84,0,6.96,3.12,6.96,6.96c0,3.84-3.12,6.96-6.96,6.96C7.24,17.98,4.11,14.86,4.11,11.02 z" />
+          </g>
+        </svg>
+      </b>
     </div>
-  </main>
+    <div class="col-xl-1 col-lg-2 col-md-2 col-sm-2 col-2 remove-padding-right remove-padding-left">
 
-  <!-- Overlay -->
-  <div class="sidebar-overlay" #overlay (click)="onOverlayClick()">
+      <aside class="left-side-new">
+        <div class="logo">
+          <a href=""><img src="../../../../assets/giza-white.png" alt="Image"></a>
+        </div>
+        <!-- end logo -->
+
+        <div class="hamburger" id="hamburger">
+          <div class="hamburger__line hamburger__line--01">
+            <div class="hamburger__line-in hamburger__line-in--01"></div>
+          </div>
+          <div class="hamburger__line hamburger__line--02">
+            <div class="hamburger__line-in hamburger__line-in--02"></div>
+          </div>
+          <div class="hamburger__line hamburger__line--03">
+            <div class="hamburger__line-in hamburger__line-in--03"></div>
+          </div>
+          <div class="hamburger__line hamburger__line--cross01">
+            <div class="hamburger__line-in hamburger__line-in--cross01"></div>
+          </div>
+          <div class="hamburger__line hamburger__line--cross02">
+            <div class="hamburger__line-in hamburger__line-in--cross02"></div>
+          </div>
+        </div>
+
+        <div class="follow-us"> Follow Us</div>
+
+        <!--<div class="equalizer"> <span></span> <span></span> <span></span> <span></span> </div>-->
+      </aside>
+
+
+    </div>
+    <div class="col-xl-11  col-lg-10  col-md-10 col-sm-10 col-10 remove-padding-left">
+      <div id="_header_layout">
+      </div>
+
+
+
+
+
+
+      <video class="video" src="../../../../assets/Banner-Video.mp4" muted autoplay playsinline loop
+        disablePictureInPicture controlsList="nodownload"></video>
+
+    </div>
   </div>
 
-  <!-- Sidebar -->
-  <aside class="sidebar" #sidebar>
-    <div class="sidebar-header">
-      <button class="sidebar-close btn" (click)="toggleSidebar()">
-        <i class="fas fa-times"></i>
-      </button>
-    </div>
-
-    <nav class="sidebar-nav">
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a href="#" class="nav-link" (click)="toggleSidebar()">
-            <span class="nav-title">Home</span>
-            <small class="nav-subtitle">Hello!</small>
-          </a>
+  <nav class="site-navigation">
+    <div class="layer"></div>
+    <div class="inner">
+      <ul id="nav-links">
+        <li>
+          <a href="">Home</a>
+          <small>Hello!</small>
         </li>
-
-        <li class="nav-item">
-          <a href="#" class="nav-link" (click)="toggleSidebar()">
-            <span class="nav-title">About Us</span>
-            <small class="nav-subtitle">All About Us</small>
-          </a>
+        <li>
+          <a href="">About Us</a>
+          <small>All About Us</small>
         </li>
-
-        <li class="nav-item">
-          <a href="#" class="nav-link" (click)="toggleSidebar()">
-            <span class="nav-title">Industries & Solutions</span>
-            <small class="nav-subtitle">Our Areas of Expertise</small>
-          </a>
+        <li>
+          <a href="">Industries & Solutions</a>
+          <small>Our Areas of Expertise</small>
         </li>
-
-        <li class="nav-item">
-          <a href="#" class="nav-link" (click)="toggleSidebar()">
-            <span class="nav-title">Careers</span>
-            <small class="nav-subtitle">Join Our Team</small>
-          </a>
+        <li>
+          <a href="">Careers</a>
+          <small>Join Our Team</small>
         </li>
-
-        <li class="nav-item">
-          <a href="#" class="nav-link" (click)="toggleSidebar()">
-            <span class="nav-title">Contact Us</span>
-            <small class="nav-subtitle">Reach Out</small>
-          </a>
+        <li>
+          <a href="">Contact Us</a>
+          <small>Reach Out</small>
         </li>
       </ul>
-    </nav>
-
-    <!-- Search Section -->
-    <div class="sidebar-search">
-      <div class="search-container">
-        <input type="text" class="form-control search-input" placeholder="Search">
-        <button class="search-btn btn">
-          <i class="fas fa-search"></i>
-        </button>
-      </div>
     </div>
-
-    <!-- Social Links -->
-    <div class="sidebar-footer">
-      <div class="social-links">
-        <a href="#" class="social-link">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a href="#" class="social-link">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#" class="social-link">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </div>
+  </nav>
+  <div class="social-media">
+    <div class="layer"></div>
+    <div class="inner">
+      <h5>Stay connected and join our online community!</h5>
+      <ul class="soical-links">
+        <li><a href="https://www.facebook.com/GizaSystemsOfficial" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        </li>
+        <li><a href="https://www.linkedin.com/company/giza-systems" target="_blank"><i
+              class="fab fa-linkedin-in"></i></a></li>
+        <li><a href="https://twitter.com/Giza_Systems" target="_blank"><svg version="1.1" id="svg5"
+              xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 1668.56 1221.19"
+              style="enable-background:new 0 0 1668.56 1221.19;" xml:space="preserve">
+              <g id="layer1" transform="translate(52.390088,-25.058597)">
+                <path id="path1009"
+                  d="M283.94,167.31l386.39,516.64L281.5,1104h87.51l340.42-367.76L984.48,1104h297.8L874.15,558.3l361.92-390.99h-87.51l-313.51,338.7l-253.31-338.7H283.94z M412.63,231.77h136.81l604.13,807.76h-136.81L412.63,231.77z">
+                </path>
+              </g>
+            </svg></a></li>
+      </ul>
     </div>
-  </aside>
-</div>
+  </div>
+  <div class="all-cases">
+    <div class="layer"></div>
+    <div class="inner">
+      <form class="search-container" name="searchHeader" action="#" method="get">
+        <div class="search-bar">
+          <div class="closeSearch"><i class="far fa-times"></i></div><input type="text" id="search-input"
+            name="searchHeaderInput" placeholder="Search">
+          <div class="search-cta"><svg fill="#000000" height="32px" width="32px" version="1.1" class="btn-search"
+              id="search" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              viewBox="0 0 24 24" xml:space="preserve">
+              <g>
+                <path
+                  d="M20.031,20.79c0.46,0.46,1.17-0.25,0.71-0.7l-3.75-3.76c1.27-1.41,2.04-3.27,2.04-5.31 c0-4.39-3.57-7.96-7.96-7.96s-7.96,3.57-7.96,7.96c0,4.39,3.57,7.96,7.96,7.96c1.98,0,3.81-0.73,5.21-1.94L20.031,20.79z M4.11,11.02c0-3.84,3.13-6.96,6.96-6.96c3.84,0,6.96,3.12,6.96,6.96c0,3.84-3.12,6.96-6.96,6.96C7.24,17.98,4.11,14.86,4.11,11.02 z" />
+              </g>
+            </svg></div>
+        </div>
+        <div class="search-filters">
+          <div class="filter-item"><label for="indSearch-1" class="c-custom-checkbox"><input id="indSearch-1"
+                class="search-category" type="checkbox" name="newsSearch" data-search-value="1"><svg viewBox="0 0 60 40"
+                aria-hidden="true" focusable="false">
+                <path
+                  d="M21,2 C13.4580219,4.16027394 1.62349378,18.3117469 3,19 C9.03653312,22.0182666 25.2482171,10.3758914 30,8 C32.9363621,6.53181896 41.321398,1.67860195 39,4 C36.1186011,6.8813989 3.11316157,27.1131616 5,29 C10.3223659,34.3223659 30.6434647,19.7426141 35,18 C41.2281047,15.5087581 46.3445303,13.6554697 46,14 C42.8258073,17.1741927 36.9154967,19.650702 33,22 C30.3136243,23.6118254 17,31.162498 17,34 C17,40.4724865 54,12.4064021 54,17 C54,23.7416728 34,27.2286213 34,37"
+                  stroke-width="4" fill="none" stroke-dasharray="270" stroke-dashoffset="270">
+                </path>
+              </svg>News</label></div>
+          <div class="filter-item"><label for="indSearch-2" class="c-custom-checkbox"><input id="indSearch-2"
+                class="search-category" type="checkbox" name="eventsSearch" data-search-value="2"><svg
+                viewBox="0 0 60 40" aria-hidden="true" focusable="false">
+                <path
+                  d="M21,2 C13.4580219,4.16027394 1.62349378,18.3117469 3,19 C9.03653312,22.0182666 25.2482171,10.3758914 30,8 C32.9363621,6.53181896 41.321398,1.67860195 39,4 C36.1186011,6.8813989 3.11316157,27.1131616 5,29 C10.3223659,34.3223659 30.6434647,19.7426141 35,18 C41.2281047,15.5087581 46.3445303,13.6554697 46,14 C42.8258073,17.1741927 36.9154967,19.650702 33,22 C30.3136243,23.6118254 17,31.162498 17,34 C17,40.4724865 54,12.4064021 54,17 C54,23.7416728 34,27.2286213 34,37"
+                  stroke-width="4" fill="none" stroke-dasharray="270" stroke-dashoffset="270">
+                </path>
+              </svg>Events</label></div>
+          <div class="filter-item"><label for="indSearch-3" class="c-custom-checkbox"><input id="indSearch-3"
+                class="search-category" type="checkbox" name="mediaKitSearch" data-search-value="3"><svg
+                viewBox="0 0 60 40" aria-hidden="true" focusable="false">
+                <path
+                  d="M21,2 C13.4580219,4.16027394 1.62349378,18.3117469 3,19 C9.03653312,22.0182666 25.2482171,10.3758914 30,8 C32.9363621,6.53181896 41.321398,1.67860195 39,4 C36.1186011,6.8813989 3.11316157,27.1131616 5,29 C10.3223659,34.3223659 30.6434647,19.7426141 35,18 C41.2281047,15.5087581 46.3445303,13.6554697 46,14 C42.8258073,17.1741927 36.9154967,19.650702 33,22 C30.3136243,23.6118254 17,31.162498 17,34 C17,40.4724865 54,12.4064021 54,17 C54,23.7416728 34,27.2286213 34,37"
+                  stroke-width="4" fill="none" stroke-dasharray="270" stroke-dashoffset="270">
+                </path>
+              </svg>Media Kit</label></div>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
