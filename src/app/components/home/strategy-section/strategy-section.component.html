@@ -1,7 +1,7 @@
 <div class="container my-5">
   <div class="row">
-    @for(item of allStrategies; track item;){
-    <div class="col-md-6 mb-3">
+    @for(item of allStrategies; track item;let i = $index, first = $first, last = $last, even = $even, odd = $odd){
+    <div class="col-md-6 d-flex  p-0 mb-3" [ngClass]="{ 'justify-content-start': even, 'justify-content-end': odd }">
       <div class="card">
         <img [src]="item.img" class="card-img-top" alt="...">
         <div class="card-body">

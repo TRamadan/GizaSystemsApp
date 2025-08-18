@@ -1,8 +1,10 @@
+import { NgClass, NgFor } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-strategy-section',
   standalone: true,
+  imports: [NgClass,NgFor],
   templateUrl: './strategy-section.component.html',
   styleUrls: ['./strategy-section.component.css'],
 })
