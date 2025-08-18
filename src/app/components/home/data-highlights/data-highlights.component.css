@@ -22,7 +22,7 @@
   .stats-container {
       flex: 1;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       padding: 60px 0;
   }
 
@@ -37,7 +37,7 @@
   }
 
   .stat-number {
-      font-size: 4rem;
+      font-size: 3rem;
       font-weight: 300;
       color: #00a7e1;
       line-height: 1;
@@ -48,12 +48,15 @@
   .stat-label {
       background-color: #4a4a4a;
       color: white;
-      padding: 12px 20px;
-      border-radius: 25px;
+      padding: 12px ;
+      border-radius: 5px;
       font-size: 0.95rem;
       font-weight: 500;
-      display: inline-block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       min-width: 200px;
+      height: 60px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       transition: all 0.3s ease;
   }
