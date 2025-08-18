@@ -9,6 +9,7 @@ import { routes } from './app.routes';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideAnimations(), // required for toast animations
+    provideRouter(routes),
     importProvidersFrom(
       ToastrModule.forRoot({
         timeOut: 3000,
