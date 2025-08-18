@@ -34,6 +34,7 @@ p {
 
 
 .button-container {
+    margin-top: 4rem;
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
