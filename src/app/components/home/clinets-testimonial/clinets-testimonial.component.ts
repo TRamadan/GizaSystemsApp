@@ -35,27 +35,27 @@ export class ClinetsTestimonialComponent implements OnInit {
     {
       id: 1,
       key: 'messi',
-      image: '../../../../assets/slider-image.png',
+      image: 'https://picsum.photos/id/1/900/500',
     },
     {
       id: 2,
       key: 'serena',
-      image: '../../../../assets/slider-image.png',
+      image: 'https://picsum.photos/id/2/900/500',
     },
     {
       id: 3,
       key: 'lebron',
-      image: '../../../../assets/slider-image.png',
+      image: 'https://picsum.photos/id/3/900/500',
     },
     {
       id: 4,
       key: 'usain',
-      image: '../../../../assets/slider-image.png',
+      image: 'https://picsum.photos/id/4/900/500',
     },
     {
       id: 5,
       key: 'simone',
-      image: '../../../../assets/slider-image.png',
+      image: 'https://picsum.photos/id/5/900/500',
     },
   ];
 
