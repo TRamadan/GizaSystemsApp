@@ -1,4 +1,4 @@
-<section class="contact-form-section">
+<section id="request-transform-form" class="contact-form-section">
   <div class="container">
     <div class="row">
       <div class="col-lg-5 d-flex flex-column justify-content-center mb-4 mb-lg-0">
@@ -9,35 +9,35 @@
       </div>
 
       <div class="col-lg-7">
-        <form>
+        <form [formGroup]="form">
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Name*</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" formControlName="name">
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Email*</label>
             <div class="col-sm-9">
-              <input type="email" class="form-control">
+              <input type="email"  class="form-control" formControlName="email">
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Phone*</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" formControlName="phone">
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Company*</label>
             <div class="col-sm-9">
-              <input type="text" class="form-control">
+              <input type="text" class="form-control" formControlName="company">
             </div>
           </div>
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Interested Solution(s):</label>
             <div class="col-sm-9">
-              <select class="form-select">
+              <select class="form-select" formControlName="solution">
                 <option selected disabled>Select a Solution</option>
                 <option>Solution 1</option>
                 <option>Solution 2</option>
@@ -48,7 +48,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Message:</label>
             <div class="col-sm-9">
-              <textarea class="form-control" rows="3"></textarea>
+              <textarea class="form-control" rows="3" formControlName="message"></textarea>
             </div>
           </div>
         </form>
@@ -59,6 +59,6 @@
 
 
 <!-- Submit Button Outside -->
-<div class="submit-area">
-  <button type="submit" class="btn-submit" (click)="createFormRequest()">Submit</button>
+<div class="submit-area" >
+  <button type="submit" [disabled]="form?.invalid" class="btn-submit" (click)="createFormRequest()">Submit</button>
 </div>

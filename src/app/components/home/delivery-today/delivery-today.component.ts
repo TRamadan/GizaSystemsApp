@@ -10,4 +10,8 @@ export class DeliveryTodayComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+  goToRequestTransformForm() {
+    localStorage.setItem('isRequestTransformForm', 'whatWeDeliverToday');
+    document.getElementById('request-transform-form')?.scrollIntoView({ behavior: 'smooth' });
+  }
 }

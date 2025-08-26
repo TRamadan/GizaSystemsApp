@@ -26,6 +26,11 @@ export class NavBarComponent implements OnInit {
     // gsap.set(this.overlay.nativeElement, { opacity: 0, display: 'none' });
   }
 
+  goToRequestTransformForm() {
+    localStorage.setItem('isRequestTransformForm', 'RequestTransformForm');
+    document.getElementById('request-transform-form')?.scrollIntoView({ behavior: 'smooth' });
+  }
+
   toggleSidebar() {
     this.isSidebarOpen = !this.isSidebarOpen;
 

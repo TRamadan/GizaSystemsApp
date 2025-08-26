@@ -61,4 +61,8 @@ export class StrategySectionComponent implements OnInit {
   ];
 
   ngOnInit() {}
+  goToRequestTransformForm() {
+    localStorage.setItem('isRequestTransformForm', 'strategySection');
+    document.getElementById('request-transform-form')?.scrollIntoView({ behavior: 'smooth' });
+  }
 }

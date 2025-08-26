@@ -32,8 +32,10 @@ h1 {
 }
 
 p {
+
     color: #ffffff;
     word-break: break-word;
+    font-size: 1.31rem;
 }
 
 .numbers {
