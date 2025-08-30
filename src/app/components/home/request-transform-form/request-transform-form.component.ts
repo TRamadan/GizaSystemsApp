@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { RequestTransformService } from './services/request-transform.service';
 import { ToastrService } from 'ngx-toastr';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-
+import { NgSelectModule } from '@ng-select/ng-select';
 @Component({
   standalone: true,
-  imports: [ReactiveFormsModule, FormsModule],
+  imports: [ReactiveFormsModule, FormsModule, NgSelectModule],
   selector: 'app-request-transform-form',
   templateUrl: './request-transform-form.component.html',
   styleUrls: ['./request-transform-form.component.css'],
@@ -18,6 +18,11 @@ export class RequestTransformFormComponent implements OnInit {
   ) {}
   form!: FormGroup;
 
+  solutions = [
+    { value: 'Solution 1', label: 'Solution 1' },
+    { value: 'Solution 2', label: 'Solution 2' },
+    { value: 'Solution 3', label: 'Solution 3' },
+  ];
   ngOnInit() {
     this.initalForm();
   }
@@ -36,7 +41,7 @@ export class RequestTransformFormComponent implements OnInit {
   createFormRequest(): void {
     
     this._requestService
-      .createRequest('values/addLandingPageEnquiry', this.form.getRawValue())
+      .createRequest('values/addLandingPageEnquiry', {...this.form.getRawValue(), solution: this.form.get('solution')?.value.join(',')})
       .subscribe({
         next: () => {
           this.tosterService.success(
