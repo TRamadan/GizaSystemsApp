@@ -18,9 +18,20 @@
       <span class="me-3 fs-5">
         Find out more about our Strategy as a Service
       </span>
-      <button class="btn download-button" (click)="goToRequestTransformForm()">
+      <button class="btn download-button" (click)="goToRequestTransformForm(content)">
         Download Now
       </button>
     </div>
   </div>
 </div>
+
+<!-- here is the dialog to open the form -->
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Request a Meeting</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <app-request-transform-form></app-request-transform-form>
+  </div>
+</ng-template>

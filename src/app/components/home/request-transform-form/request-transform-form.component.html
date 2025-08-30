@@ -19,7 +19,7 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Email*</label>
             <div class="col-sm-9">
-              <input type="email"  class="form-control" formControlName="email">
+              <input type="email" class="form-control" formControlName="email">
             </div>
           </div>
           <div class="mb-3 row">
@@ -37,7 +37,8 @@
           <div class="mb-3 row">
             <label class="col-sm-3 col-form-label">Interested Solution(s):</label>
             <div class="col-sm-9">
-              <ng-select [items]="solutions"  [multiple]="true" bindLabel="label" bindValue="value" formControlName="solution"></ng-select>
+              <ng-select [items]="solutions" [multiple]="true" bindLabel="label" bindValue="value"
+                formControlName="solution"></ng-select>
               <!-- <select class="form-select" formControlName="solution">
                 <option selected disabled>Select a Solution</option>
                 <option>Solution 1</option>
@@ -60,6 +61,6 @@
 
 
 <!-- Submit Button Outside -->
-<div class="submit-area" >
-  <button type="submit" [disabled]="form?.invalid" class="btn-submit" (click)="createFormRequest()">Submit</button>
+<div class="submit-area d-flex justify-content-end me-5 py-4">
+  <button type="submit" [disabled]="form.invalid" class="btn-submit" (click)="createFormRequest()">Submit</button>
 </div>

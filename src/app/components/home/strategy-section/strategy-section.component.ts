@@ -1,14 +1,16 @@
 import { NgClass, NgFor } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-
+import { Component, inject, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { RequestTransformFormComponent } from '../request-transform-form/request-transform-form.component';
 @Component({
   selector: 'app-strategy-section',
   standalone: true,
-  imports: [NgClass,NgFor],
+  imports: [NgClass, NgFor, RequestTransformFormComponent],
   templateUrl: './strategy-section.component.html',
   styleUrls: ['./strategy-section.component.css'],
 })
 export class StrategySectionComponent implements OnInit {
+  private modalService = inject(NgbModal);
   constructor() {}
   allStrategies: any = [
     {
@@ -61,8 +63,14 @@ export class StrategySectionComponent implements OnInit {
   ];
 
   ngOnInit() {}
-  goToRequestTransformForm() {
-    localStorage.setItem('isRequestTransformForm', 'strategySection');
-    document.getElementById('request-transform-form')?.scrollIntoView({ behavior: 'smooth' });
+  goToRequestTransformForm(modalContent: any) {
+    // localStorage.setItem('isRequestTransformForm', 'strategySection');
+    // document
+    //   .getElementById('request-transform-form')
+    //   ?.scrollIntoView({ behavior: 'smooth' });
+
+    this.modalService.open(modalContent, {
+      size: 'lg',
+    });
   }
 }

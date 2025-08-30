@@ -20,7 +20,8 @@
             <a href="#" class="btn btn-link text-white fs-4 text-decoration-none">
               Download Our Capabilities Profile
             </a>
-            <button type="button" (click)="goToRequestTransformForm()" class="btn btn-outline-primary-custom px-4 rounded-1">Download</button>
+            <button type="button" (click)="goToRequestTransformForm(content)"
+              class="btn btn-outline-primary-custom px-4 rounded-1">Download</button>
           </div>
         </div>
       </div>
@@ -28,3 +29,16 @@
     </div>
   </section>
 </div>
+
+<!-- Request Transform Form Component  -->
+
+<!-- here is the dialog to open the form -->
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Request a Meeting</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body">
+    <app-request-transform-form></app-request-transform-form>
+  </div>
+</ng-template>

@@ -1,7 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { RequestTransformService } from './services/request-transform.service';
 import { ToastrService } from 'ngx-toastr';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  FormsModule,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { NgSelectModule } from '@ng-select/ng-select';
 @Component({
   standalone: true,
@@ -39,11 +45,15 @@ export class RequestTransformFormComponent implements OnInit {
   }
 
   createFormRequest(): void {
-    
+    debugger;
     this._requestService
-      .createRequest('values/addLandingPageEnquiry', {...this.form.getRawValue(), solution: this.form.get('solution')?.value.join(',')})
+      .createRequest('values/addLandingPageEnquiry', {
+        ...this.form.getRawValue(),
+        solution: this.form.get('solution')?.value.join(','),
+      })
       .subscribe({
         next: () => {
+          debugger;
           this.tosterService.success(
             'Done sending your inquery',
             'Successfull operation'
@@ -61,7 +71,7 @@ export class RequestTransformFormComponent implements OnInit {
       });
   }
 
-  downloadFile(){
+  downloadFile() {
     const a = document.createElement('a');
     a.href = 'assets/landing/images/giza-load.gif';
     a.download = 'giza-load.gif';
