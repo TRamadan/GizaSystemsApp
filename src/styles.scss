@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+// Variables
+
+@font-face {
+  font-family: 'TTNormal';
+  src: url('./assets/fonts/TT-Norms-Pro-Normal.ttf');
+}
+@font-face {
+  font-family: "TTBold";
+  src: url('./assets/fonts/TT-Norms-Pro-Black.ttf');
+}
+@font-face {
+  font-family: "TTSemiBold";
+  src: url('./assets/fonts/TT-Norms-Pro-DemiBold.ttf');
+}
+@font-face {
+  font-family: "TTMedium";
+  src: url('./assets/fonts/TT-Norms-Pro-Medium.ttf');
+}
+@font-face {
+  font-family: "TTLight";
+  src: url('./assets/fonts/TT-Norms-Pro-Light.ttf');
+}
+@font-face {
+  font-family: "TTExtraLight";
+  src: url('./assets/fonts/TT-Norms-Pro-ExtraLight.ttf');
+}
+@font-face {
+  font-family: "TTThin";
+  src: url('./assets/fonts/TT-Norms-Pro-Thin.ttf');
+}
+
+// Global Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'TTNormal', sans-serif;
+}
+
+// App Container
+.app-container {
+  position: relative;
+  min-height: 100vh;
+}

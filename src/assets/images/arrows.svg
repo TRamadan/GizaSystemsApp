@@ -1,0 +1,15 @@
+<svg width="80" height="62" viewBox="0 0 80 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- back chevron (gray) -->
+  <polyline points="56 7 34 31 56 55"
+            stroke="#9CA3AF"
+            stroke-width="10"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            opacity="0.75"/>
+  <!-- front chevron (blue) -->
+  <polyline points="30 7 8 31 30 55"
+            stroke="#00AEEF"
+            stroke-width="10"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+</svg>

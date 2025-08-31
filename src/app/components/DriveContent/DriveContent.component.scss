@@ -1,0 +1,55 @@
+:host {
+  display: block;
+  .connected-cities-section {
+    position: relative;
+    min-height: 250px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+  }
+
+  .city-header-content {
+    position: relative;
+    z-index: 2;
+    opacity: 1;
+
+    // transform: translateY(50px);
+
+    .lead{
+      width: 80%;
+      font-size: 1.5rem;
+    }
+  }
+
+  .text-primary {
+    color: #00a7e1 !important;
+  }
+
+
+
+  @media (max-width: 768px) {
+    .connected-cities-section {
+      min-height: 300px;
+    }
+    .city-header-content{
+      text-align: center !important;
+      padding-inline: 1rem;
+
+    }
+
+    .display-4 {
+      font-size: 1.8rem;
+    }
+    .city-header-content {
+      .lead{
+        font-size: 1.2rem;
+        width: 100%;
+      }
+    }
+
+    .circle {
+      transform: scale(0.6);
+    }
+  }
+}

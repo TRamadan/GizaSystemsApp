@@ -1,0 +1,137 @@
+<div id="contactForm" class="contact-container" #contactContainer>
+  <div class="row h-75 g-0 ">
+    <!-- Left Panel -->
+    <div class="col-lg-5 col-md-6 left-panel d-flex align-items-center justify-content-center" #leftPanel>
+      <div class="text-start text-white p-4">
+        <h1 class="display-4 text-primary px-4 mb-3" #titleText>Ready to Transform Your City?</h1>
+        <p class="lead fs-4 px-4" #subtitleText>Request a meeting</p>
+      </div>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="col-lg-7 col-md-6 right-panel d-flex align-items-center" #rightPanel>
+      <div class="container-fluid p-4 p-lg-5">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" #formElement class="contact-form">
+          <div class="row g-3">
+            <!-- Name Field -->
+            <div class="col-12" #nameField>
+              <label for="name" class="form-label text-white">Name*</label>
+              <input
+                type="text"
+                class="form-control form-control-lg"
+                id="name"
+                formControlName="name"
+                [class.is-invalid]="isFieldInvalid('name')"
+              >
+              <div class="invalid-feedback" *ngIf="isFieldInvalid('name')">
+                Name is required
+              </div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="col-12" #emailField>
+              <label for="email" class="form-label text-white">Email*</label>
+              <input
+                type="email"
+                class="form-control form-control-lg"
+                id="email"
+                formControlName="email"
+                [class.is-invalid]="isFieldInvalid('email')"
+              >
+              <div class="invalid-feedback" *ngIf="isFieldInvalid('email')">
+                <span *ngIf="contactForm.get('email')?.errors?.['required']">Email is required</span>
+                <span *ngIf="contactForm.get('email')?.errors?.['email']">Please enter a valid email</span>
+              </div>
+            </div>
+
+            <!-- Phone Field -->
+            <div class="col-12" #phoneField>
+              <label for="phone" class="form-label text-white">Phone*</label>
+              <input
+                type="tel"
+                class="form-control form-control-lg"
+                id="phone"
+                formControlName="phone"
+                [class.is-invalid]="isFieldInvalid('phone')"
+              >
+              <div class="invalid-feedback" *ngIf="isFieldInvalid('phone')">
+                Phone is required
+              </div>
+            </div>
+
+            <!-- Company Field -->
+            <div class="col-12" #companyField>
+              <label for="company" class="form-label text-white">Company*</label>
+              <input
+                type="text"
+                class="form-control form-control-lg"
+                id="company"
+                formControlName="company"
+                [class.is-invalid]="isFieldInvalid('company')"
+              >
+              <div class="invalid-feedback" *ngIf="isFieldInvalid('company')">
+                Company is required
+              </div>
+            </div>
+
+            <!-- Interested Solutions Dropdown -->
+            <div class="col-12" #solutionsField>
+              <label for="solutions" class="form-label text-white">Interested Solution(s):</label>
+              <ng-select
+                id="solutions"
+                [items]="solutions"
+                [multiple]="true"
+                bindValue="value"
+                bindLabel="label"
+                appendTo="body"
+                formControlName="solution"
+                [class.is-invalid]="isFieldInvalid('solution')"
+              >
+               
+              </ng-select>  
+              <!-- <select class="form-select form-select-lg" id="solutions" formControlName="solution">
+                <option value="">Select a solution</option>
+                <option value="smart-traffic">Smart Traffic Management</option>
+                <option value="waste-management">Waste Management Solutions</option>
+                <option value="energy-optimization">Energy Optimization</option>
+                <option value="public-safety">Public Safety Systems</option>
+                <option value="citizen-engagement">Citizen Engagement Platform</option>
+                <option value="data-analytics">Data Analytics & Insights</option>
+                <option value="other">Other</option>
+              </select> -->
+            </div>
+
+            <!-- Message Field -->
+            <div class="col-12" #messageField>
+              <label for="message" class="form-label text-white">Message:</label>
+              <textarea
+                class="form-control form-control-lg"
+                id="message"
+                rows="4"
+                formControlName="message"
+                placeholder="Tell us about your city's needs..."
+              ></textarea>
+            </div>
+
+            <!-- Submit Button -->
+          
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="col-12 py-5 px-3 text-end" #submitButton>
+      <button
+        type="button"
+        (click)="onSubmit()"
+        class="btn btn-primary btn-lg px-5 py-3 rounded-5 fw-semibold"
+        [disabled]="contactForm.invalid || isSubmitting"
+      >
+        <span *ngIf="!isSubmitting">Submit</span>
+        <span *ngIf="isSubmitting">
+          <span class="spinner-border spinner-border-sm me-2" role="status"></span>
+          Sending...
+        </span>
+      </button>
+    </div>
+  </div>
+</div>

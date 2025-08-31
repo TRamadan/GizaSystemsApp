@@ -1,0 +1,52 @@
+<section class="empowering-cities-section">
+  <div class="container-fluid px-2">
+    <!-- Header Content -->
+    <div class="row  justify-content-center">
+      <div class="col-lg-10">
+        <div class="header-content text-start ">
+          <h2 class=" display-4 text-primary mx-auto text-center w-75   mb-4">
+            Empowering Smarter Cities - Strategic Growth for the Region
+          </h2>
+          <p class="section-description">
+            Our COC functions as the digital brain of modern urban communities, adopting a sophisticated system-of-systems approach.
+            We seamlessly integrate diverse city systems, vast data streams, and complex operations into one intuitive, centralized
+            platform. It's designed to deliver comprehensive operational city intelligence to ensure efficiency.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature Cards -->
+    <div class="row  justify-content-center g-4 ">
+      <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let feature of features">
+        <div class="feature-card"
+             [attr.data-aos]="'fade-up'"
+             [attr.data-aos-delay]="feature.delay">
+          <div class="card-icon-wrapper">
+            <div class="card-icon">
+              <img [src]="feature.img" class="icon_feat">
+            </div>
+          </div>
+          <div class="card-content">
+            <h4 class="card-title">{{ feature.title }}</h4>
+            <p class="card-description">{{ feature.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Description -->
+    <div class="row  justify-content-center">
+      <div class="col-lg-10">
+        <div class="bottom-content  text-start" >
+          <p class="bottom-description">
+            With the G5 Group COC, your city gains the strategic advantage, driving sustainability initiatives, ensuring robust
+            public safety, boosting ,operational efficiency,
+            and significantly improving citizen satisfaction in line with national development
+            agendas and priorities like Egypt's National Smart Cities Strategy and Saudi Vision 2030.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

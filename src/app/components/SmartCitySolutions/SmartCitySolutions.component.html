@@ -1,0 +1,197 @@
+<div class="solutions-container">
+  <div class="container">
+    <!-- Header Section -->
+    <div class="header-section" #headerSection>
+      <h1 class="main-title  display-5" #mainTitle>
+        Our Expertise: Tailored Solutions for Every Urban Need
+      </h1>
+      <p class="subtitle" #subtitle>
+        Comprehensive Smart City COC Offerings
+      </p>
+      <p class="description" #description>
+        Every city, from ancient heritage sites to futuristic mega projects, has unique needs. Our modular and scalable COC solutions are
+        designed to address the specific challenges and ambitions of diverse urban environments in the region.
+      </p>
+    </div>
+
+    <!-- Solutions Grid -->
+    <div class="solutions-grid" #solutionsGrid>
+      <!-- Row 1 -->
+      <div class="row g-4 mb-4">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="solution-card public-safety"
+               #solutionCard
+               (mouseenter)="onCardHover($event, true)"
+               (mouseleave)="onCardHover($event, false)">
+            <div class="card-image">
+              <!-- <div class="image-bg safety-bg"></div> -->
+               <img src="assets/images/Publicsafetysmaller.jpg"  class="image_card_info" alt="Publicsafetysmaller">
+              <div class="image-overlay" #imageOverlay></div>
+            </div>
+            <div class="card-content">
+              <h3 class="solution-title">Public Safety Solutions</h3>
+              <ul class="feature-list">
+                <li>Emergency Response</li>
+                <li>Crime Prevention through Intelligent Incident Detection & Response</li>
+                <li>Advanced Video Surveillance & Analytics</li>
+              </ul>
+            </div>
+            <div class="hover-effect" #hoverEffect></div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="solution-card transportation"
+               #solutionCard
+               (mouseenter)="onCardHover($event, true)"
+               (mouseleave)="onCardHover($event, false)">
+            <div class="card-image">
+              <img src="assets/images/SmarttransportaionSmaller.jpg"  class="image_card_info" alt="SmarttransportaionSmaller">
+              <div class="image-overlay" #imageOverlay></div>
+            </div>
+            <div class="card-content">
+              <h3 class="solution-title">Transportation Solutions</h3>
+              <ul class="feature-list">
+                <li>Intelligent Traffic Monitoring & Congestion Management</li>
+                <li>Smart Parking Systems & Analytics</li>
+                <li>Public Transit Optimization & Efficiency</li>
+              </ul>
+            </div>
+            <div class="hover-effect" #hoverEffect></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="row g-4 mb-4">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="solution-card water-management"
+               #solutionCard
+               (mouseenter)="onCardHover($event, true)"
+               (mouseleave)="onCardHover($event, false)">
+            <div class="card-image">
+              <img src="assets/images/SmartwatermanagementSmaller.jpg"  class="image_card_info" alt="SmartwatermanagementSmaller">
+              <div class="image-overlay" #imageOverlay></div>
+            </div>
+            <div class="card-content">
+              <h3 class="solution-title">Smart Water Management Solutions</h3>
+              <ul class="feature-list">
+                <li>Real-time Water Quality Monitoring</li>
+                <li>Precise Water Leakage Detection & Prevention</li>
+                <li>Smart Metering & Non-revenue Water Management</li>
+              </ul>
+            </div>
+            <div class="hover-effect" #hoverEffect></div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="solution-card energy-management"
+               #solutionCard
+               (mouseenter)="onCardHover($event, true)"
+               (mouseleave)="onCardHover($event, false)">
+            <div class="card-image">
+              <img src="assets/images/SmartenerymanagementSmaller.jpg"  class="image_card_info" alt="SmartenerymanagementSmaller">
+              <div class="image-overlay" #imageOverlay></div>
+            </div>
+            <div class="card-content">
+              <h3 class="solution-title">Smart Energy Management Solutions</h3>
+              <ul class="feature-list">
+                <li>Intelligent Power Grid Monitoring & Management</li>
+                <li>Smart Metering for Optimized Consumption</li>
+                <li>Holistic Energy Optimization Strategies Across Infrastructure</li>
+              </ul>
+            </div>
+            <div class="hover-effect" #hoverEffect></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="row g-4 mb-4">
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="solution-card environmental"
+               #solutionCard
+               (mouseenter)="onCardHover($event, true)"
+               (mouseleave)="onCardHover($event, false)">
+            <div class="card-image">
+              <img src="assets/images/EnvironmentSmaller.jpg"  class="image_card_info" alt="EnvironmentSmaller">
+              <div class="image-overlay" #imageOverlay></div>
+            </div>
+            <div class="card-content">
+              <h3 class="solution-title">Environmental Solutions</h3>
+              <ul class="feature-list">
+                <li>Real-time Air Quality Monitoring & Management</li>
+                <li>Efficient Waste Management & Recycling Optimization</li>
+                <li>Proactive Flood Detection & Warning Systems</li>
+              </ul>
+            </div>
+            <div class="hover-effect" #hoverEffect></div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="solution-card infrastructure"
+               #solutionCard
+               (mouseenter)="onCardHover($event, true)"
+               (mouseleave)="onCardHover($event, false)">
+            <div class="card-image">
+              <img src="assets/images/BildingmanagementSmaller.jpg"  class="image_card_info" alt="BildingmanagementSmaller">
+              <div class="image-overlay" #imageOverlay></div>
+            </div>
+            <div class="card-content">
+              <h3 class="solution-title">Infrastructure Solutions</h3>
+              <ul class="feature-list">
+                <li>Integrated Building Management Systems</li>
+                <li>Road Condition Alerts & Predictive Maintenance Planning</li>
+                <li>Comprehensive Asset Tracking & Management</li>
+              </ul>
+            </div>
+            <div class="hover-effect" #hoverEffect></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 4 - Full Width -->
+      <div class="row g-4">
+        <div class="col-12">
+          <div class="solution-card citizen-engagement wide-card"
+               #solutionCard
+               (mouseenter)="onCardHover($event, true)"
+               (mouseleave)="onCardHover($event, false)">
+            <div class="wide-card-content">
+              <div class="card-image wide-image">
+                <img src="assets/images/CitizenMangementsmaller.jpg"  class="image_card_info" alt="CitizenMangementsmaller">
+                <div class="image-overlay" #imageOverlay></div>
+              </div>
+              <div class="card-content wide-content">
+                <h3 class="solution-title">Citizen Engagement Solutions</h3>
+                <ul class="feature-list wide-features">
+                  <li>Seamless Integration with Government Digital Systems</li>
+                  <li>Streamlined Complaints & Feedback Management</li>
+                  <li>Intuitive Mobile Applications for Citizen Services</li>
+                  <li>Efficient Service Request Management Platforms</li>
+                </ul>
+              </div>
+            </div>
+            <div class="hover-effect" #hoverEffect></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Download Section -->
+    <div class="download-section" #downloadSection>
+      <div class="download-card">
+        <p class="download-text">Download our Smart City Command & Control Flyer</p>
+        <button class="download-btn" #downloadBtn (click)="downloadCaseStudies(contactModalTemplate)">
+          <i class="fas fa-download"></i>
+          Download
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #contactModalTemplate>
+  <app-contact-form></app-contact-form>
+</ng-template>

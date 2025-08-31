@@ -1,0 +1,57 @@
+<div class="command-center">
+  <!-- Hero Section with Command Center Background -->
+  <div class="hero-section">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-12">
+          <img src="assets/images/Controlroom2Smaller.jpg" class="image_Controlroom2Smaller" alt="Controlroom2Smaller">
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Sectors Grid -->
+  <div class="sectors-section">
+    <div class="container-fluid px-md-5">
+      <div class="row g-4">
+        <div class="col-12 px--5">
+          <div class="command-center-bg px-md-5">
+            <div class="overlay"></div>
+            <div class="content-wrapper ">
+              <h1 class="main-title">Sectors We Transform</h1>
+              <p class="subtitle">Partnering with Visionary Urban Environments Across the Region</p>
+              <p class="description">
+                Delivering a wide range of urban landscapes from established urban communities to growing new cities.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 pxc" *ngFor="let sector of sectors; let i = index">
+          <!-- [class]="'sector-' + (i + 1)" -->
+          <div #sectorCard class="d-flex justify-content-start align-items-center gap-3 sector-card"
+          (mouseenter)="onHover($event, true)"
+          (mouseleave)="onHover($event, false)"
+          >
+             <div  class="square_box_blue"></div>
+             <span class="text-light fw-medium test-sm" >{{ sector.title }}</span>
+          </div>
+          <!-- <div
+            #sectorCard
+            class="sector-card"
+            [class]="'sector-' + (i + 1)"
+            (mouseenter)="onHover($event, true)"
+            (mouseleave)="onHover($event, false)">
+            <div class="card-content">
+              <div class="sector-icon">
+                <i [class]="sector.icon"></i>
+              </div>
+              <h3 class="sector-title">{{ sector.title }}</h3>
+              <div class="glow-effect"></div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

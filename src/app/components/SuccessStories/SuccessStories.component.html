@@ -1,0 +1,93 @@
+<section class="success-stories-section">
+  <div class="container">
+    <!-- Section Title -->
+    <div class="row">
+      <div class="col-12 text-center my-5">
+        <h2 #sectionTitle class="section-title display-5 fw-bold text-primary">Success Stories from the Region</h2>
+      </div>
+    </div>
+
+    <!-- Carousel Container -->
+    <div class="row mt-5">
+      <div class="col-12">
+        <div class="carousel-wrapper position-relative">
+
+          <!-- Custom Navigation Arrows -->
+          <button
+            #prevBtn
+            class="carousel-nav-btn prev-btn"
+            (click)="previousSlide()"
+            [disabled]="activeSlideIndex === 0">
+            <img src="assets/images/arrows.svg" />
+          </button>
+
+          <button
+            #nextBtn
+            class="carousel-nav-btn next-btn"
+            (click)="nextSlide()"
+            [disabled]="activeSlideIndex === stories.length - 1">
+            <img src="assets/images/arrows.svg" class="rotate-180" />
+          </button>
+
+          <!-- Bootstrap Carousel -->
+          <ngb-carousel
+            #carousel
+            class="success-carousel"
+            [interval]="5000"
+            [wrap]="true"
+            [pauseOnHover]="true"
+            [showNavigationArrows]="false"
+            [showNavigationIndicators]="false"
+            (slide)="onSlideChange($event)">
+
+            <ng-template ngbSlide [id]="story.toString()" *ngFor="let story of [1,2,3]; let i = index">
+              <div class="carousel-slide">
+                <div class="row g-4 justify-content-center">
+
+                  <!-- Story Cards (3 per slide) -->
+                  <div
+                    class="col-12 col-md-6 col-lg-4"
+                    *ngFor="let item of getSlideStories(i); let cardIndex = index">
+                    <div
+                      class="story-card"
+                      #storyCard
+                      [attr.data-index]="cardIndex">
+
+                      <!-- Card Image -->
+                      <div class="card-image-container">
+                        <div class="card-image" [style.background-image]="'url(' + item.image + ')'">
+                          <div class="image-overlay"></div>
+                        </div>
+                      </div>
+
+                      <!-- Card Content -->
+                      <div class="card-content">
+                        <h4 class="card-title">{{ item.title }}</h4>
+                        <p class="card-description">{{ item.description }}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ng-template>
+          </ngb-carousel>
+        </div>
+      </div>
+    </div>
+
+    <!-- Download Section -->
+    <div class="row mt-5">
+      <div class="col-12 text-center">
+        <div #downloadSection class="download-section">
+          <span class="download-text">Download full case studies</span>
+          <button
+            #downloadBtn
+            class="btn btn-primary download-btn ms-3"
+            (click)=" goToContactForm()">
+            Download
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

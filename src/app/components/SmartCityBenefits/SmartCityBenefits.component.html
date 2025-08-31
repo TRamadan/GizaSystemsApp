@@ -1,0 +1,67 @@
+<div class="benefits-container">
+  <div class="container">
+    <!-- Header Section -->
+    <div class="header-section text-center mb-5" #headerSection>
+      <h1 class="main-title display-4 " #mainTitle>
+        Unlock Efficiency, Sustainability and Quality of Life
+      </h1>
+      <p class="subtitle" #subtitle>
+        Implementing the GS Group Smart City COC delivers measurable, transformative benefits for urban environments across the region.
+      </p>
+    </div>
+
+    <!-- Benefits Grid -->
+    <!-- <div class="row g-4" #benefitsGrid>
+      <div class="col-lg-4 col-md-6 col-sm-12"
+           *ngFor="let benefit of benefits; let i = index"
+           [attr.data-index]="i">
+        <div class="benefit-card"
+             #benefitCard
+             (mouseenter)="onCardHover($event, true)"
+             (mouseleave)="onCardHover($event, false)">
+
+          <div class="card-content">
+            <div class="benefit-icon" #benefitIcon>
+              <img [src]="benefit.img" class="benefitIcon">
+            </div>
+
+            <h3 class="benefit-title" #benefitTitle>
+              {{ benefit.title }}
+            </h3>
+            <p class="benefit-description" #benefitDescription>
+              {{ benefit.description }}
+            </p>
+          </div>
+          <div class="bg-pattern" #bgPattern>
+            <div class="pattern-dot" *ngFor="let dot of [1,2,3,4,5]"></div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="row  justify-content-center g-4 ">
+      <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let feature of benefits">
+        <div class="feature-card"
+             [attr.data-aos]="'fade-up'"
+             [attr.data-aos-delay]="feature.delay">
+          <div class="card-icon-wrapper">
+            <div class="card-icon">
+              <img [src]="feature.img" class="icon_feat">
+            </div>
+          </div>
+          <div class="card-content">
+            <h4 class="card-title">{{ feature.title }}</h4>
+            <p class="card-description">{{ feature.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Elements -->
+  <!-- <div class="background-elements">
+    <div class="bg-circle bg-circle-1"></div>
+    <div class="bg-circle bg-circle-2"></div>
+    <div class="bg-circle bg-circle-3"></div>
+  </div> -->
+</div>

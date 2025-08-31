@@ -1,0 +1,149 @@
+<footer class="footer-section bg-dark text-white py-5" #footerContainer>
+  <div class="container">
+    <!-- Header Section -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <h2 class="display-6 mb-4" #headerTitle>Need More Information or Want to Get in Touch?</h2>
+        <div class="social-links d-flex align-items-center gap-3" #socialLinks>
+          <span class="text-light">Get in touch</span>
+          <div class="social-icons d-flex gap-2">
+            <a href="https://www.facebook.com/GizaSystemsOfficial" class="social-icon facebook" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/giza-systems" class="social-icon linkedin" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/Giza_Systems" class="social-icon twitter" aria-label="Twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Row -->
+    <div class="row g-4">
+      <!-- Contact Information -->
+      <div class="col-lg-12 col-md-6" #contactSection>
+        <div class="contact-info">
+          <div class="contact-item mb-4">
+            <div class="d-flex  align-items-start gap-3">
+              <div class="contact-icon">
+                <i class="fas fa-envelope text-light"></i>
+              </div>
+              <div>
+                <h5 class="mb-1">Email Us</h5>
+                <a href="mailto:sales.egypt@gizasystems.com" class="text-light text-decoration-none">
+                 {{' sales.egypt@gizasystems.com'}}
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-item mb-4">
+            <div class="d-flex align-items-start gap-3">
+              <div class="contact-icon">
+                <i class="fas fa-phone text-light"></i>
+              </div>
+              <div>
+                <h5 class="mb-1">Call Us</h5>
+                <a href="tel:+20216660" class="text-light text-decoration-none">
+                  +202 216660
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="d-flex align-items-start gap-3">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt text-light"></i>
+              </div>
+              <div>
+                <h5 class="mb-1">Find Us</h5>
+                <p class="text-light mb-0">
+                  Plot 51A, Second Sector, City Center New Cairo, Egypt
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="w-100">
+      <!-- Quick Links & Subsidiaries -->
+      <div class="col-lg-7 col-md-12" #linksSection>
+        <div class="row g-4">
+          <!-- Quick Links -->
+          <div class="col-md-5">
+            <h5 class="mb-3 text-primary">Quick Links</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="https://solutions.com.sa/" target="_blank" class="text-light text-decoration-none">About solutions by GSE</a></li>
+              <li><a href="https://gizasystems.com/about/" target="_blank" class="text-light text-decoration-none">About Giza Systems</a></li>
+              <li><a href="https://gizasystems.com/industries/" target="_blank" class="text-light text-decoration-none">Industries</a></li>
+              <li><a href="https://gizasystems.com/publications/" target="_blank" class="text-light text-decoration-none">Publications</a></li>
+              <li><a href="https://gizasystems.com/media-kit/" target="_blank" class="text-light text-decoration-none">Media Kit</a></li>
+              <li><a href="https://gizasystems.com/events/" target="_blank" class="text-light text-decoration-none">Events</a></li>
+              <li><a href="https://gizasystems.com/news/" target="_blank" class="text-light text-decoration-none">News</a></li>
+            </ul>
+          </div>
+
+          <!-- Our Subsidiaries -->
+          <div class="col-md-7">
+            <h5 class="mb-3 text-primary">Our Subsidiaries</h5>
+            <div class="subsidiaries-logos">
+              <div class="subsidiary-item mb-3">
+                <img src="assets/images/logo.png" alt="Giza Systems TELECOMS" class="subsidiary-logo">
+              </div>
+              <div class="subsidiary-item mb-3">
+                <img src="assets/images/logo.png" alt="Giza Systems VENTURES" class="subsidiary-logo">
+              </div>
+              <div class="subsidiary-item mb-3">
+                <img src="assets/images/logo.png" alt="Giza Systems GIZA SCAN" class="subsidiary-logo">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Newsletter Subscription -->
+      <div class="offset-lg-2 col-lg-3 col-md-12" #newsletterSection>
+        <h5 class="mb-3 text-primary">Subscribe to Our Newsletter</h5>
+        <p class="text-light mb-3">Subscribe to our newsletter to get the latest updates</p>
+
+        <form [formGroup]="newsletterForm" (ngSubmit)="onSubscribe()" class="newsletter-form">
+          <div class="input-group">
+            <input
+              type="email"
+              class="form-control newsletter-input"
+              placeholder="Email Address"
+              formControlName="email"
+              [class.is-invalid]="isNewsletterEmailInvalid()"
+            >
+            <button
+              type="submit"
+              class="btn btn-primary newsletter-btn"
+              [disabled]="newsletterForm.invalid || isSubscribing"
+            >
+              <i class="fas fa-paper-plane" *ngIf="!isSubscribing"></i>
+              <span class="spinner-border spinner-border-sm" *ngIf="isSubscribing"></span>
+            </button>
+          </div>
+          <div class="invalid-feedback d-block" *ngIf="isNewsletterEmailInvalid()">
+            <small *ngIf="newsletterForm.get('email')?.errors?.['required']">Email is required</small>
+            <small *ngIf="newsletterForm.get('email')?.errors?.['email']">Please enter a valid email</small>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="row mt-5 pt-4 border-top border-secondary">
+      <div class="col-12">
+        <p class="text-center text-muted mb-0" #copyright>
+          Copyright © Giza Systems Egypt, 2024. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
