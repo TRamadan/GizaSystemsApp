@@ -22,7 +22,7 @@
   .stats-container {
       flex: 1;
       display: flex;
-      align-items: flex-start;
+      align-items: center;
       padding: 60px 0;
   }
 
