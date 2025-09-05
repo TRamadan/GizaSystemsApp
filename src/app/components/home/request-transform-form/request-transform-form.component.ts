@@ -58,7 +58,8 @@ export class RequestTransformFormComponent implements OnInit {
             'Done sending your inquery',
             'Successfull operation'
           );
-          this.downloadFile();
+          const type = localStorage.getItem('contactForm')??'';
+          this.downloadFile(type);
           this.form.reset();
           this.form.get('requestFromLandingPage')?.setValue('land 02');
         },
@@ -71,10 +72,21 @@ export class RequestTransformFormComponent implements OnInit {
       });
   }
 
-  downloadFile() {
+  downloadFile(type: string) {
+    let url = '';
+    if(type === 'strategySection') {
+      url = 'assets/pdfs/strategySection.pdf';
+    }
+    if(type === 'whatWeDeliverToday') {
+      url = 'assets/pdfs/whatWeDeliverToday.pdf';
+    }
+    if(type === '') {
+      url=''
+    }
+    
     const a = document.createElement('a');
-    a.href = 'assets/landing/images/giza-load.gif';
-    a.download = 'giza-load.gif';
+    a.href = url;
+    a.download = type;
     // a.target = '_blank';
     document.body.appendChild(a);
     a.click();

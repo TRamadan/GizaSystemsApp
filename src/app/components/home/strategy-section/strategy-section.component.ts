@@ -68,7 +68,7 @@ export class StrategySectionComponent implements OnInit {
     // document
     //   .getElementById('request-transform-form')
     //   ?.scrollIntoView({ behavior: 'smooth' });
-
+    localStorage.setItem('contactForm', 'strategySection');
     this.modalService.open(modalContent, {
       size: 'lg',
     });

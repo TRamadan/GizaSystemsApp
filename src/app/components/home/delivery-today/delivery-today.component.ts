@@ -17,6 +17,7 @@ export class DeliveryTodayComponent implements OnInit {
 
   ngOnInit() {}
   goToRequestTransformForm(modalContent: any) {
+    localStorage.setItem('contactForm', 'whatWeDeliverToday');
     this.modalService.open(modalContent, {
       size: 'lg',
     });
