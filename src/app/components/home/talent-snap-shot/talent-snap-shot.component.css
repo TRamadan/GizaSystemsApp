@@ -79,7 +79,7 @@
     }
 
     .stat-item p {
-        margin-left: 38px;
+        margin-left: 48px;
         /* 30px icon width + 8px gap */
         text-align: left;
     }
@@ -143,5 +143,5 @@
 }
 
 .py_8{
-    padding-block: 8rem;
+    padding-block: 60px;
 }

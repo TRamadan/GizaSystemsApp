@@ -1,7 +1,7 @@
 <div class="container my_8">
   <div class="row">
     @for(item of allStrategies; track item;let i = $index, first = $first, last = $last, even = $even, odd = $odd){
-    <div class="col-md-6 d-flex  gap-1 p-0 px-2 mb-3" [ngClass]="{ 'justify-content-end': even }">
+    <div class="col-md-6 d-flex  gap-1 p-0 px-2 " [ngClass]="{ 'justify-content-end': even ,'mb-3': (allStrategies.length -2) > i}">
       <div class="card">
         <img [src]="item.img" class="card-img-top" alt="...">
         <div class="card-body">
@@ -13,12 +13,12 @@
     }
   </div>
 
-  <div class="row my-4">
+  <div class="row my_60">
     <div class="col-md-12  text-center">
       <span class="me-3 fs-5">
         Find out more about our Strategy as a Service
       </span>
-      <button class="btn download-button" (click)="goToRequestTransformForm(content)">
+      <button class="xb" (click)="goToRequestTransformForm(content)">
         Download Now
       </button>
     </div>

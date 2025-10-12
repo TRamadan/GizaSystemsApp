@@ -30,6 +30,9 @@ p {
     color: #00A7E1;
     border-radius: 0;
 }
+.text-primary-custom{
+     color: #00A7E1;
+}
 
 
 
@@ -83,4 +86,9 @@ p {
         height: 100%;
         object-fit: cover;
     }
+}
+
+.x_deliver{
+    font-weight: 400;
+    transform: translateX(-5px);
 }

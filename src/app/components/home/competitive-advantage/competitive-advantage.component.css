@@ -4,6 +4,7 @@
 
 .title {
     color: #00A7E1;
+    transform: translateX(-5px);
 }
 
 .text-cyan {
@@ -42,6 +43,9 @@ p {
 .numbers {
     font-size: 2.5rem;
     /* font-weight: 700; */
+    &:last-child {
+        transform: translateX(-5px);
+    }
 }
 
 .text-small {

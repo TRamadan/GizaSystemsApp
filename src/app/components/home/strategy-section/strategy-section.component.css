@@ -35,7 +35,7 @@
 
 .card-title {
     font-size: 1.25rem;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 0.75rem;
     line-height: 1.3;
     color: #00a7e1;
@@ -163,5 +163,9 @@
 }
 
 .my_8{
-    margin-block: 8rem;
+    margin-block: 60px;
+}
+
+.my_60{
+    margin-block: 60px;
 }

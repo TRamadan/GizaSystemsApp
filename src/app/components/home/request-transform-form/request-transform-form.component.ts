@@ -1,5 +1,5 @@
 import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, Inject, input, ViewChild, type OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import gsap from 'gsap';
@@ -8,7 +8,7 @@ import { ToastrService } from 'ngx-toastr';
 import { RequestTransformService } from './services/request-transform.service';
 @Component({
   standalone: true,
-  imports: [ReactiveFormsModule, FormsModule, NgSelectModule],
+  imports: [ReactiveFormsModule, FormsModule, NgSelectModule,NgIf],
   selector: 'app-request-transform-form',
   templateUrl: './request-transform-form.component.html',
   styleUrls: ['./request-transform-form.component.scss'],
