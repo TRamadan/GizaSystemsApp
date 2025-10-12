@@ -122,7 +122,7 @@ subscribe-form button {
 .footer-widget-heading h3 {
     color: #fff;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 300;
     margin-bottom: 40px;
     position: relative;
 }
@@ -164,7 +164,7 @@ body>footer.footer-section>div.container>div>div>div.col-xl-6.col-lg-6.mb-50 {
 
 .footer-widget ul li a {
     color: #878787;
-    font-weight: 500;
+    font-weight: 300;
 }
 
 img {
@@ -242,7 +242,7 @@ button[type=submit] {
 .cta-text h4 {
     color: #fff;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 300;
     margin-bottom: 2px;
 }
 
@@ -254,7 +254,7 @@ button[type=submit] {
 .cta-text h4 {
     color: #fff;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 300;
     margin-bottom: 2px;
 }
 

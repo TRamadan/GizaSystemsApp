@@ -61,7 +61,7 @@
 /* Headline */
 .hero-title {
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 300 !important;
     margin-bottom: 1.5rem;
     color: #00a7e1;
     line-height: 1.2;

@@ -1,4 +1,4 @@
 export const environment = {
   production: false,
-  apiUrl: 'http://ahmedeldriny-001-site3.ltempurl.com/api/',
+  apiUrl: 'http://172.16.1.160:8090/api/',
 };

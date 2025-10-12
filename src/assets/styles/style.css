@@ -200,7 +200,7 @@ input[type=submit] {
     background: #222327;
     color: #fff;
     padding: 0 30px;
-    font-weight: 600;
+    font-weight: 300;
     font-size: 14px;
 }
 
@@ -325,7 +325,7 @@ textarea {
 }
 
 .pagination .page-item .page-link {
-    font-weight: 600;
+    font-weight: 300;
     border-radius: 0 !important;
     font-size: 13px;
     color: #fff;
@@ -512,7 +512,7 @@ textarea {
 .preloader .inner span {
     color: #fff;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 300;
     font-size: 13px;
 }
 
@@ -719,7 +719,7 @@ textarea {
     opacity: 0.7;
     letter-spacing: 0.5px;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 300;
     transform: translateY(-15px);
 }
 
@@ -825,7 +825,7 @@ textarea {
 
 .social-media .inner h5 {
     font-size: 3vw;
-    font-weight: 600;
+    font-weight: 300;
     color: #fff;
     margin-bottom: 50px;
 }
@@ -1546,7 +1546,7 @@ textarea {
 }
 
 .intro h6 {
-    font-weight: 600;
+    font-weight: 300;
     text-transform: uppercase;
     font-size: 19px;
 }
@@ -1566,12 +1566,12 @@ textarea {
     line-height: 1;
     font-family: "Fjalla One", sans-serif;
     float: left;
-    font-weight: 400;
+    font-weight: 300;
     margin-right: 20px;
 }
 
 .intro h4 {
-    font-weight: 600;
+    font-weight: 300;
     color: #019cda;
 }
 
@@ -1667,7 +1667,7 @@ textarea {
 .intro-image figure figcaption h6 {
     font-size: 13px;
     color: #fff;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 
@@ -1700,7 +1700,7 @@ textarea {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 30px;
     margin: 20px 10%;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 
@@ -1763,7 +1763,7 @@ textarea {
 
 .icon-content-block .content-block h6 {
     display: block;
-    font-weight: 600;
+    font-weight: 300;
     letter-spacing: 0.5px;
     margin-bottom: 10px;
     font-size: 24px;
@@ -1923,7 +1923,7 @@ textarea {
 
 .testimonials .testimonial .reviewer h6 {
     display: block;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .testimonials .testimonial .reviewer small {
@@ -1991,7 +1991,7 @@ textarea {
 
 .team figure figcaption h6 {
     display: block;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .team figure figcaption small {
@@ -2185,7 +2185,7 @@ textarea {
 }
 
 .works .ind-home>divh3 {
-    font-weight: 600;
+    font-weight: 300;
     margin-bottom: 5px;
     font-size: 26px;
     letter-spacing: -1px;
@@ -2210,7 +2210,7 @@ textarea {
 }
 
 .case-study h6 {
-    font-weight: 600;
+    font-weight: 300;
     margin-top: 30px;
 }
 
@@ -2335,13 +2335,13 @@ textarea {
     margin-left: 0;
     text-align: center;
     font-size: 11px;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .blog .sidebar .widget .categories li a {
     color: #222327;
     margin-left: 0;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .blog .sidebar .widget .tags {
@@ -2358,7 +2358,7 @@ textarea {
 }
 
 .blog .sidebar .widget .tags li a {
-    font-weight: 600;
+    font-weight: 300;
     font-size: 11px;
     background: #222327;
     color: #fff;
@@ -2474,7 +2474,7 @@ textarea {
 }
 
 .blog .post .post-content h5 {
-    font-weight: 600;
+    font-weight: 300;
     margin-top: 30px;
 }
 
@@ -2562,7 +2562,7 @@ textarea {
     display: block;
     margin-bottom: 20px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .blog .post .post-content .post-title a {
@@ -2615,7 +2615,7 @@ textarea {
 }
 
 .blog .post .post-content .post-categories li a {
-    font-weight: 600;
+    font-weight: 300;
     font-size: 11px;
     background: #222327;
     color: #fff;
@@ -2721,7 +2721,7 @@ textarea {
 }
 
 .contact h6 {
-    font-weight: 600;
+    font-weight: 300;
     margin-top: 30px;
 }
 
@@ -2771,7 +2771,7 @@ textarea {
     font-size: 13px;
     line-height: 16px;
     top: -20px;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .contact .contact-form .form-ele .form-group input {
@@ -2785,7 +2785,7 @@ textarea {
     font-size: 13px;
     line-height: 16px;
     top: -20px;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .contact .contact-form .form-ele .form-group span.focused-input {
@@ -2806,7 +2806,7 @@ textarea {
     font-size: 13px;
     line-height: 16px;
     top: -20px;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .contact .contact-form .form-ele .form-group label.error {
@@ -2814,7 +2814,7 @@ textarea {
     color: red;
     margin-top: 5px;
     margin-bottom: 0;
-    font-weight: 600;
+    font-weight: 300;
     font-size: 13px;
 }
 
@@ -3527,7 +3527,7 @@ ul.more-sol-inner li {
 }
 
 ul.more-sol-inner li a {
-    font-weight: 600;
+    font-weight: 300;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -3575,7 +3575,7 @@ ul.more-sol-inner li span.more-sol-color {
     border-radius: 12px;
     border: none;
     color: #fff;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
 
 .benefits-wrapper .ben-item {
@@ -3678,7 +3678,7 @@ ul.more-sol-inner li span.more-sol-color {
 .solution-txt h3 {
     text-decoration: none;
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 300;
     display: block;
     margin-bottom: 12px;
     color: #00A7E1;
@@ -3715,7 +3715,7 @@ ul.more-sol-inner li span.more-sol-color {
         width: 80vw;
         word-wrap: break-word;
         padding: 10px;
-        font-weight: bold;
+        /* font-weight: bold; */
         font-size: 24px;
     }
 }
@@ -3735,7 +3735,7 @@ ul.more-sol-inner li span.more-sol-color {
     .solution-txt h3 {
         text-decoration: none;
         font-size: 24px;
-        font-weight: 600;
+        font-weight: 300;
         display: block;
         margin-bottom: 12px;
         color: #00A7E1;
@@ -3793,13 +3793,13 @@ ul.more-sol-inner li span.more-sol-color {
 
 .hero-txt h2 {
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .hero-txt a,
 .hero-txt p {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .hero-img {

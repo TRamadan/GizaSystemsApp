@@ -14,7 +14,7 @@
     position: absolute;
     color: #fff;
     font-size: clamp(1.8rem, 4vw, 3.5rem);
-    font-weight: 600;
+    font-weight: 300;
     top: 350%;
     left: 16%;
     transform: translate(-50%, -50%);
@@ -28,7 +28,7 @@
 
 .numbers-section h3 {
     font-size: clamp(1.5rem, 2.5vw, 2rem);
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .stat-item {
@@ -91,7 +91,7 @@
         position: absolute;
         color: #fff;
         font-size: 2rem;
-        font-weight: 600;
+        font-weight: 300;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -124,7 +124,7 @@
         position: absolute;
         color: #fff;
         font-size: 1.6rem;
-        font-weight: 600;
+        font-weight: 300;
         top: 55%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -140,4 +140,8 @@
     .stat-item p {
         font-size: 0.9rem;
     }
+}
+
+.py_8{
+    padding-block: 8rem;
 }
