@@ -89,6 +89,11 @@ p {
 }
 
 .x_deliver{
-    font-weight: 400;
+    font-weight: 300;
     transform: translateX(-5px);
 }
+
+:host ::ng-deep   app-request-transform-form input{
+    height: 30px !important;
+ }
+ 

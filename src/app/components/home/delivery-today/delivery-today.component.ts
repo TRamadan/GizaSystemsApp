@@ -20,6 +20,9 @@ export class DeliveryTodayComponent implements OnInit {
     localStorage.setItem('contactForm', 'whatWeDeliverToday');
     this.modalService.open(modalContent, {
       size: 'lg',
+      centered: true,
+      scrollable: true,
+      
     });
     // localStorage.setItem('isRequestTransformForm', 'whatWeDeliverToday');
     // document.getElementById('request-transform-form')?.scrollIntoView({ behavior: 'smooth' });

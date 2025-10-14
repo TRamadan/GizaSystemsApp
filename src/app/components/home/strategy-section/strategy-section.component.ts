@@ -71,6 +71,8 @@ export class StrategySectionComponent implements OnInit {
     localStorage.setItem('contactForm', 'strategySection');
     this.modalService.open(modalContent, {
       size: 'lg',
+      centered: true,
+      scrollable: true,
     });
   }
 }

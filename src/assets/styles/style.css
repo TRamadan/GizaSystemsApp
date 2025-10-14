@@ -214,6 +214,25 @@ button[type=submit] {
     font-size: 18px;
 }
 
+.modal-body:has(app-request-transform-form){
+    input[type=submit],input[type=password],input[type=text],input[type=email],input[type=search]{
+        height: 30px !important;
+    }
+    .my_btn_submit{
+        padding:15px !important    
+    }
+    .my_form_container{
+        padding: 0 15px !important;
+    }
+    
+}
+.modal-header{
+    background: linear-gradient(135deg, #1b252c 0%, #011c36 100%) !important;
+    color: #fff !important;
+}
+.modal-header .modal-title{
+    color: #fff !important;
+}
 .contact-form button[type=submit] {
     border-radius: 12px;
 }

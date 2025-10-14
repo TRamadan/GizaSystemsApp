@@ -1,17 +1,21 @@
-<div id="contactForm" class="contact-container" #contactContainer>
+<div id="request-transform-form" class="contact-container" #contactContainer>
   <div class="row h-75 g-0 ">
     <div class="col-lg-5 col-md-6 left-panel d-flex align-items-center justify-content-center" #leftPanel>
       <div class="text-start text-white p-4">
         <h1 class="display-4 text-primary px-4 mb-3" #titleText>Ready to Transform Your City?</h1>
-        <p class="lead fs-4 px-4" #subtitleText>Request a meeting</p>
+        @if(isDefault()){
+          <p class="lead fs-4 px-4" #subtitleText>Request a meeting</p>
+        }@else{
+          <p class="lead fs-4 px-4" #subtitleText>Download Now</p>
+        }
       </div>
     </div>
 
     <div class="col-lg-7 col-md-6 right-panel d-flex align-items-center" #rightPanel>
-      <div class="container-fluid p-4 p-lg-5">
+      <div class="container-fluid p-4 p-lg-5 my_form_container">
         <form [formGroup]="contactForm" (ngSubmit)="createFormRequest()" #formElement class="contact-form">
-          <div class="row g-3">
-            <div class="col-12" #nameField>
+          <div class="row g-3" [class]="isDefault() ? 'mt-auto' : 'my-2'">
+            <div class="col-12" [class]="isDefault() ? 'mt-2' : 'mt-0'" #nameField>
               <label for="name" class="form-label text-white">Name*</label>
               <input
                 type="text"
@@ -25,7 +29,7 @@
               </div>
             </div>
 
-            <div class="col-12" #emailField>
+            <div class="col-12" [class]="isDefault() ? 'mt-2' : 'mt-0'" #emailField>
               <label for="email" class="form-label text-white">Email*</label>
               <input
                 type="email"
@@ -40,12 +44,13 @@
               </div>
             </div>
 
-            <div class="col-12" #phoneField>
+            <div class="col-12" [class]="isDefault() ? 'mt-2' : 'mt-0'" #phoneField>
               <label for="phone" class="form-label text-white">Phone*</label>
               <input
                 type="tel"
                 class="form-control form-control-lg"
                 id="phone"
+                [maxLength]="10"
                 formControlName="phone"
                 [class.is-invalid]="isFieldInvalid('phone')"
               >
@@ -54,7 +59,7 @@
               </div>
             </div>
 
-            <div class="col-12" #companyField>
+            <div class="col-12" [class]="isDefault() ? 'mt-2' : 'mt-0'" #companyField>
               <label for="company" class="form-label text-white">Company*</label>
               <input
                 type="text"
@@ -68,17 +73,18 @@
               </div>
             </div>
 
-            <div class="col-12" #solutionsField>
+            <div class="col-12"  [class]="isDefault() ? 'mt-2' : 'mt-0'" #solutionsField>
               <label for="solutions" class="form-label text-white">Interested Solution(s):</label>
               @if(isDefault()){
                 <ng-select
                 id="solutions"
-                [items]="solutions"
+                [items]="solutions()"
                 [multiple]="true"
                 bindValue="value"
                 bindLabel="label"
                 appendTo="body"
                 formControlName="solution"
+                 dropdownPosition="auto"
                 [class.is-invalid]="isFieldInvalid('solution')"
               >
                
@@ -86,7 +92,7 @@
               }@else{
                 <ng-select
                 id="solutions"
-                [items]="solutions"
+                [items]="solutions()"
                 [multiple]="true"
                 bindValue="value"
                 bindLabel="label"
@@ -100,12 +106,13 @@
       
             </div>
 
-            <div class="col-12" #messageField>
+            <div class="col-12" [class]="isDefault() ? 'mt-2' : 'mt-0'" #messageField>
               <label for="message" class="form-label text-white">Message:</label>
               <textarea
                 class="form-control form-control-lg"
                 id="message"
-                rows="4"
+                [rows]="isDefault() ? 4 : 1"
+                [style.height]="isDefault() ? 'auto' : '38px'"
                 formControlName="message"
                 placeholder="Tell us about your city's needs..."
               ></textarea>
@@ -116,7 +123,7 @@
         </form>
       </div>
     </div>
-    <div class="col-12 py-5 px-3 text-end" #submitButton>
+    <div class="col-12 py-5 px-3 text-end my_btn_submit" #submitButton>
       <button
         type="button"
         (click)="createFormRequest()"

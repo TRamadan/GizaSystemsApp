@@ -1,10 +1,12 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, Inject, input, ViewChild, type OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, Component, DestroyRef, ElementRef, Inject, input, signal, ViewChild, type OnInit } from '@angular/core';
 import { CommonModule, NgIf } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import gsap from 'gsap';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { ToastrService } from 'ngx-toastr';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
+
 import { RequestTransformService } from './services/request-transform.service';
 @Component({
   standalone: true,
@@ -30,7 +32,7 @@ export class RequestTransformFormComponent implements OnInit {
   isDefault = input<boolean>(true)
   contactForm: FormGroup;
   isSubmitting = false;
-  solutions = [
+  solutions =signal<{value:string,label:string}[]>([
     { value: 'smart-traffic', label: 'Smart Traffic Management' },
     { value: 'waste-management', label: 'Waste Management Solutions' },
     { value: 'energy-optimization', label: 'Energy Optimization' },
@@ -38,29 +40,32 @@ export class RequestTransformFormComponent implements OnInit {
     { value: 'citizen-engagement', label: 'Citizen Engagement Platform' },
     { value: 'data-analytics', label: 'Data Analytics & Insights' },
     { value: 'other', label: 'Other' }
-  ];
+  ]);
   
   constructor(private fb: FormBuilder,
     private apiService: RequestTransformService,
     private tosterService: ToastrService,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private destroy$:DestroyRef
    
   ) {
     this.contactForm = this.fb.group({
       name: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
-      phone: ['', [Validators.required]],
+      phone: ['', [Validators.required,Validators.pattern('^[0-9]*$')]],
       company: ['', [Validators.required]],
-      solution: [''],
+      solution: ['', [Validators.required]],
       message: [''],
-      "requestFromLandingPage": ["COC"]
+       isMeeting:[true,[Validators.required]],
+      "requestFromLandingPage": ["GDC"]
 
     });
   }
 
-  form!: FormGroup;
 
   ngOnInit() {
+
+    this.contactForm.get('isMeeting')?.setValue(this.isDefault());
   }
   initalForm(): void {
  
@@ -68,7 +73,9 @@ export class RequestTransformFormComponent implements OnInit {
 
 
   ngAfterViewInit(): void {
+    if(this.isDefault()) {
       this.initAnimations();
+    }
   }
 
   initAnimations(): void {
@@ -172,27 +179,42 @@ export class RequestTransformFormComponent implements OnInit {
 
   isFieldInvalid(fieldName: string): boolean {
     const field = this.contactForm.get(fieldName);
+    //check if field is pattern invalid
+    if(field?.hasError('pattern')) {
+      return true;
+    }
+    
+    //check if field is invalid and dirty or touched
     return !!(field && field.invalid && (field.dirty || field.touched));
   }
   createFormRequest(): void {
+    this.isSubmitting = true;
     this.apiService
       .createRequest('values/addLandingPageEnquiry', {
-        ...this.form.getRawValue(),
-        solution: this.form.get('solution')?.value.join(','),
+        ...this.contactForm.getRawValue(),
+        solution: this.contactForm.get('solution')?.value.join(','),
       })
+      .pipe(
+        takeUntilDestroyed(this.destroy$)
+      )
       .subscribe({
         next: () => {
-          this.tosterService.success(
+          this.tosterService.info(
             'Done sending your inquery',
             'Successfull operation'
           );
+          this.isSubmitting = false;
           const type = localStorage.getItem('contactForm')??'';
-          this.downloadFile(type);
+          if(!this.isDefault()){
+            this.downloadFile(type);
+          }
           localStorage.removeItem('contactForm');
-          this.form.reset();
-          this.form.get('requestFromLandingPage')?.setValue('land 02');
+          this.contactForm.reset();
+          this.contactForm.get('requestFromLandingPage')?.setValue('GDC');
+          this.contactForm.get('isMeeting')?.setValue(this.isDefault());
         },
         error: () => {
+          this.isSubmitting = false;
           this.tosterService.error(
             'There is an error occured, please try again',
             'Wrong operation'
@@ -203,11 +225,14 @@ export class RequestTransformFormComponent implements OnInit {
 
   downloadFile(type: string) {
     let url = '';
+    let name=""
     if(type === 'strategySection') {
-      url = 'assets/pdfs/strategySection.pdf';
+      url = 'assets/pdfs/Strategy as a Service Flyer KML.pdf';
+      name="Strategy as a Service Flyer KML.pdf"
     }
     if(type === 'whatWeDeliverToday') {
-      url = 'assets/pdfs/whatWeDeliverToday.pdf';
+      url = 'assets/pdfs/GDC Brochure KML.pdf';
+      name="GDC Brochure KML.pdf"
     }
     if(type === '') {
       url=''
@@ -217,7 +242,7 @@ export class RequestTransformFormComponent implements OnInit {
       
       const a = document.createElement('a');
       a.href = url;
-      a.download = type;
+      a.download = name;
       // a.target = '_blank';
       document.body.appendChild(a);
       a.click();

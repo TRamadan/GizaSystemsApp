@@ -81,3 +81,7 @@ body {
     }
 
 }
+.toast-info{
+  background-color: rgb(0, 167, 225) !important;
+}
+    

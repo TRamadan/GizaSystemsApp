@@ -35,10 +35,10 @@
 <!-- here is the dialog to open the form -->
 <ng-template #content let-modal>
   <div class="modal-header">
-    <h4 class="modal-title">Request a Meeting</h4>
-    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    <h4 class="modal-title">Download Now</h4>
+    <button type="button" class="btn-close bg-light" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
   </div>
-  <div class="modal-body">
-    <app-request-transform-form></app-request-transform-form>
+  <div class="modal-body m-0 p-0">
+    <app-request-transform-form [isDefault]="false"></app-request-transform-form>
   </div>
 </ng-template>
