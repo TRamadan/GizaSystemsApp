@@ -5,6 +5,7 @@
 .title {
     color: #00A7E1;
     transform: translateX(-5px);
+    font-weight: 400;
 }
 
 .text-cyan {
@@ -50,7 +51,7 @@ p {
 
 .text-small {
     font-size: 1.25rem;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 @media (max-width:1024px) {
