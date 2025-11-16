@@ -1,19 +1,34 @@
 /* Banner with background image */
 .banner {
-    background: url('../../../../assets/talent-snap-shot.png') no-repeat center center/cover;
-    min-height: 100vh;
+    background: url('../../../../assets/talent-snap-shot.png') no-repeat;
+     background-size:cover;
+     background-position:  0rem !important;
+    min-height: 75vh;
     /* smaller default for responsiveness */
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    object-fit: cover;
+  aspect-ratio: 16/9;
+  height: 500px;
+  width: 100%;
+
+}
+
+@media (min-height: 940px) {
+    .banner {
+        background: url("../../../../assets/talent-snap-shot.png") no-repeat !important;
+        background-size: cover !important;
+        background-position: -16rem 0rem !important;
+    }
 }
 
 /* Title over banner */
 .bg-title {
     position: absolute;
     color: #fff;
-    font-size: clamp(1.8rem, 4vw, 3.5rem);
+    font-size: 3rem;
     font-weight: 300;
     bottom: 0%;
     left: 16%;
@@ -142,11 +157,11 @@
     }
 }
 
-.py_8{
+.py_8 {
     padding-block: 60px;
 }
 
-._my_container{
-    height: 100vh;
-
+._my_container {
+    aspect-ratio: 16 / 9;
+    /* height: 100vh; */
 }

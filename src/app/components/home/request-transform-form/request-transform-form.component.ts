@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectionStrategy, Component, DestroyRef, ElementRef, Inject, input, signal, ViewChild, type OnInit } from '@angular/core';
+import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, DestroyRef, ElementRef, Inject, input, signal, ViewChild, type OnInit } from '@angular/core';
 import { CommonModule, NgIf } from '@angular/common';
 import { FormsModule, ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal, NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -46,7 +46,8 @@ export class RequestTransformFormComponent implements OnInit {
     private apiService: RequestTransformService,
     private tosterService: ToastrService,
     private modalService: NgbModal,
-    private destroy$:DestroyRef
+    private destroy$:DestroyRef,
+    private cdr:ChangeDetectorRef
    
   ) {
     this.contactForm = this.fb.group({
@@ -54,7 +55,7 @@ export class RequestTransformFormComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       phone: ['', [Validators.required,Validators.pattern('^[0-9]*$')]],
       company: ['', [Validators.required]],
-      solution: ['', [Validators.required]],
+      solution: [''],
       message: [''],
        isMeeting:[true,[Validators.required]],
       "requestFromLandingPage": ["GDC"]
@@ -64,7 +65,6 @@ export class RequestTransformFormComponent implements OnInit {
 
 
   ngOnInit() {
-
     this.contactForm.get('isMeeting')?.setValue(this.isDefault());
   }
   initalForm(): void {
@@ -192,7 +192,7 @@ export class RequestTransformFormComponent implements OnInit {
     this.apiService
       .createRequest('values/addLandingPageEnquiry', {
         ...this.contactForm.getRawValue(),
-        solution: this.contactForm.get('solution')?.value.join(','),
+        solution: this.contactForm.get('solution')?.value,
       })
       .pipe(
         takeUntilDestroyed(this.destroy$)
@@ -212,6 +212,7 @@ export class RequestTransformFormComponent implements OnInit {
           this.contactForm.reset();
           this.contactForm.get('requestFromLandingPage')?.setValue('GDC');
           this.contactForm.get('isMeeting')?.setValue(this.isDefault());
+          this.cdr.markForCheck();
         },
         error: () => {
           this.isSubmitting = false;

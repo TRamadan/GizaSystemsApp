@@ -62,7 +62,7 @@
 /* Headline */
 .hero-title {
     font-size: 2rem;
-    font-weight: 300 !important;
+    font-weight: 350 !important;
     margin-bottom: 1.5rem;
     color: #00a7e1;
     line-height: 1.2;
@@ -85,12 +85,12 @@
 /* Large screens (992px+) */
 @media (min-width: 992px) {
     .hero-title {
-        font-size: 3.5rem;
+        font-size: 4rem;
     }
 
     .hero-content {
         text-align: right;
-        padding-right: 15%;
+        padding-right: calc(100% - 75%);
         left: 40%;
 
     }
@@ -99,7 +99,7 @@
 /* Extra large screens (1200px+) */
 @media (min-width: 1200px) {
     .hero-title {
-        font-size: 55px;
+        font-size: 3.5rem;
         text-align: justify;
 
     }

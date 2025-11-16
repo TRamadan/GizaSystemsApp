@@ -12,6 +12,7 @@ export const appConfig: ApplicationConfig = {
     provideAnimations(), // required for toast animations
     provideRouter(routes),
     provideHttpClient(),
+    
     importProvidersFrom(
       ToastrModule.forRoot({
         timeOut: 3000,

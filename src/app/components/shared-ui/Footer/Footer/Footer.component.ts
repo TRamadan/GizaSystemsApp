@@ -15,6 +15,7 @@ import {
   Validators,
 } from '@angular/forms';
 import gsap from 'gsap';
+declare var Swiper: any;
 @Component({
   selector: 'app-footer',
   standalone: true,
@@ -39,6 +40,22 @@ export class FooterComponent implements OnInit {
     // Component initialization
   }
 
+   ngAfterViewInit() {
+    new Swiper('.sub-slider-footer', {
+      slidesPerView: 3,
+      spaceBetween: 40,
+      loop: true,
+      autoplay: {
+        delay: 1500,
+        disableOnInteraction: false
+      },
+      breakpoints: {
+        320: { slidesPerView: 2, spaceBetween: 20 },
+        768: { slidesPerView: 3, spaceBetween: 30 },
+        1024: { slidesPerView: 3, spaceBetween: 40 }
+      }
+    });
+  }
   isNewsletterEmailInvalid(): boolean {
     const email = this.newsletterForm.get('email');
     return !!(email && email.invalid && (email.dirty || email.touched));

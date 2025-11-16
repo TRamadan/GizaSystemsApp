@@ -43,6 +43,7 @@
       transition: all 0.3s ease;
       position: relative;
       z-index: 1 !important;
+      font-size: small;
     }
     .ng-select {
       z-index: 999999999999 !important;
@@ -157,5 +158,6 @@
 
 
 textarea{
+  font-size: small;
   z-index: 1 !important;
 }

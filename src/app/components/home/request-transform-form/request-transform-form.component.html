@@ -2,9 +2,9 @@
   <div class="row h-75 g-0 ">
     <div class="col-lg-5 col-md-6 left-panel d-flex align-items-center justify-content-center" #leftPanel>
       <div class="text-start text-white p-4">
-        <h1 class="display-4 text-primary px-4 mb-3" #titleText>Ready to Transform Your City?</h1>
+        <h1 class="display-4 text-primary px-4 mb-3" #titleText>Ready to Transform Your Business?</h1>
         @if(isDefault()){
-          <p class="lead fs-4 px-4" #subtitleText>Request a meeting</p>
+          <p class="lead fs-4 px-4" #subtitleText>Request a Meeting</p>
         }@else{
           <p class="lead fs-4 px-4" #subtitleText>Download Now</p>
         }
@@ -50,7 +50,7 @@
                 type="tel"
                 class="form-control form-control-lg"
                 id="phone"
-                [maxLength]="10"
+                [maxLength]="11"
                 formControlName="phone"
                 [class.is-invalid]="isFieldInvalid('phone')"
               >
@@ -75,7 +75,14 @@
 
             <div class="col-12"  [class]="isDefault() ? 'mt-2' : 'mt-0'" #solutionsField>
               <label for="solutions" class="form-label text-white">Interested Solution(s):</label>
-              @if(isDefault()){
+              <input
+                type="text"
+                class="form-control form-control-lg"
+                id="solution"
+                formControlName="solution"
+                [class.is-invalid]="isFieldInvalid('solution')"
+              >
+              <!-- @if(isDefault()){
                 <ng-select
                 id="solutions"
                 [items]="solutions()"
@@ -102,7 +109,7 @@
               >
                
               </ng-select>  
-              }
+              } -->
       
             </div>
 
@@ -114,7 +121,7 @@
                 [rows]="isDefault() ? 4 : 1"
                 [style.height]="isDefault() ? 'auto' : '38px'"
                 formControlName="message"
-                placeholder="Tell us about your city's needs..."
+                placeholder="Tell us about your organization’s needs"
               ></textarea>
             </div>
 
