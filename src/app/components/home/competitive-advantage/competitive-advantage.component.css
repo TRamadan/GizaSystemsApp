@@ -1,10 +1,9 @@
 .bg-dark-blue {
-    background-color:#1B252C ;
+    background-color: #1B252C;
 }
 
 .title {
     color: #00A7E1;
-    transform: translateX(-5px);
     font-weight: 300;
 }
 
@@ -14,94 +13,93 @@
 
 .container-fluid {
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.inner-wrapper {
+    flex: 1;
+    display: flex;
 }
 
 .content-section {
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 3rem;
+}
+
+.image-section {
+    position: relative;
+    min-height: 300px;
 }
 
 .image-section img {
     width: 100%;
-    object-fit: cover;
-    aspect-ratio: 1;
     height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 350;
     color: white;
+    line-height: 1.2;
 }
 
 p {
-
     color: #ffffff;
     word-break: break-word;
-    font-size: 1.31rem;
+    font-size: clamp(1rem, 1.5vw, 1.31rem);
     font-weight: 350;
+    line-height: 1.6;
 }
 
 .numbers {
-    font-size: 2.5rem;
-    /* font-weight: 700; */
-    &:last-child {
-        transform: translateX(-5px);
-    }
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    margin-bottom: 0.5rem;
 }
 
 .text-small {
-    font-size: 1.25rem;
+    font-size: clamp(1rem, 1.2vw, 1.25rem);
     font-weight: 400;
+    display: block;
+    margin-top: 0.25rem;
 }
 
-@media (max-width:1024px) {
-    .content-section, .image-section img {
-        height: auto;
-    }
-
-
+@media (max-width: 1024px) {
     .inner-wrapper {
-        flex-direction: column !important;
-
+        flex-direction: column;
     }
 
     .text-wrapper {
         width: 100%;
-        height: fit-content !important;
+        order: 2;
+        /* Ensure text comes after image on mobile if desired, or remove to keep top */
     }
 
     .image-section {
         width: 100%;
-
-        & img {
-            width: 100%;
-        }
-    }
-}
-
-
-
-@media (max-width: 767px) {
-    .content-section, .image-section img {
-        height: auto;
+        height: 40vh;
+        /* Give image some height on mobile */
+        min-height: 300px;
     }
 
     .content-section {
-        padding: 3rem 1rem;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
-
-    .numbers {
-        font-size: 2rem;
+        padding: 2rem;
     }
 }
 
-@media (min-height: 950px) {
-    ._section_height{
-    height: 100vh !important;
-}
+@media (max-width: 767px) {
+    .content-section {
+        padding: 1.5rem;
+    }
+
+    .image-section {
+        height: 30vh;
+        min-height: 250px;
+    }
 }

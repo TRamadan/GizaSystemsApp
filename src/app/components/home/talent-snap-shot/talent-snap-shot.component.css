@@ -16,7 +16,7 @@
 
 }
 
-@media (min-height: 940px) {
+@media (min-height: 940px) and (max-width:1499px) {
     .banner {
         background: url("../../../../assets/talent-snap-shot.png") no-repeat !important;
         background-size: cover !important;

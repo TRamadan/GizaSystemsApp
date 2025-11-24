@@ -31,9 +31,8 @@
     position: relative;
     z-index: 10;
     color: white;
-    text-align: center;
     padding: 0 1rem;
-    left: 35rem;
+    width: 100%;
 }
 
 .info-box {
@@ -47,7 +46,6 @@
     width: 55px;
     height: 51px;
     background-color: #00A7E1;
-    /* blue color for icon */
     border-radius: 4px;
     flex-shrink: 0;
 }
@@ -61,47 +59,31 @@
 
 /* Headline */
 .hero-title {
-    font-size: 2rem;
-    font-weight: 350 !important;
+    font-size: 3.5rem;
+    font-weight: 400 !important;
     margin-bottom: 1.5rem;
     color: #00a7e1;
-    line-height: 1.2;
+    line-height: 1;
+    transform: translateX(20%);
+
+}
+
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 2.5rem;
+        transform: none;
+
+    }
+
+    .hero-content {
+        padding: 0 2rem;
+    }
 }
 
 /* Tablet & up (768px+) */
 @media (min-width: 768px) {
-    .hero-title {
-        font-size: 3rem;
-    }
-
     .hero-content {
-        text-align: right;
         padding-right: 2rem;
-        left: 0;
-
-    }
-}
-
-/* Large screens (992px+) */
-@media (min-width: 992px) {
-    .hero-title {
-        font-size: 4rem;
-    }
-
-    .hero-content {
-        text-align: right;
-        padding-right: calc(100% - 75%);
-        left: 40%;
-
-    }
-}
-
-/* Extra large screens (1200px+) */
-@media (min-width: 1200px) {
-    .hero-title {
-        font-size: 3.5rem;
-        text-align: justify;
-
     }
 }
 
@@ -110,14 +92,15 @@
     .hero-section {
         padding: 2rem 0;
         min-height: 60vh;
-        /* reduce height for smaller devices */
     }
 
     .hero-title {
-        font-size: 1.8rem;
+        text-align: center;
+        /* Center on mobile if preferred, or keep right */
         margin-bottom: 1rem;
-        text-align: right;
-        color: #00A7E1;
-
     }
+}
+
+.translateX-30 {
+    transform: translateX(15%);
 }

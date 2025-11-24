@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: 'TT Norms Pro';
   src: url('./assets/fonts/TT-Norms-Pro-Normal.ttf') format('truetype');
@@ -11,6 +10,14 @@
   font-family: 'TT Norms Pro';
   src: url('./assets/fonts/TT-Norms-Pro-Medium.ttf') format('truetype');
   font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Norms Pro';
+  src: url('./assets/fonts/TT-Norms-Pro-DemiBold.ttf') format('truetype');
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
@@ -63,29 +70,36 @@
 
 body {
   font-family: 'TT Norms Pro', sans-serif;
+  overflow-x: hidden;
 }
-.xb{
+
+html {
+  overflow-x: hidden;
+}
+
+.xb {
   color: rgb(255, 255, 255);
-    font-size: 18px;
-    background: 0% 0% no-repeat padding-box padding-box rgb(0, 167, 225);
-    border-radius: 12px;
-    padding: 7px 15px;
-    border-width: 0px;
-    border-style: initial;
-    border-color: initial;
-    border-image: initial;
-    &:disabled{
+  font-size: 18px;
+  background: 0% 0% no-repeat padding-box padding-box rgb(0, 167, 225);
+  border-radius: 12px;
+  padding: 7px 15px;
+  border-width: 0px;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  /* &:disabled{
       opacity: 0.7;
       transform: none;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    }
+    } */
 
 }
-.toast-info{
-  
+
+.toast-info {
+
   background-color: rgb(0, 167, 225) !important;
-  & *{
+
+  & * {
     font-weight: 400 !important;
   }
 }
-    
