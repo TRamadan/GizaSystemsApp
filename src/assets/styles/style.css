@@ -1074,7 +1074,7 @@ textarea {
     -webkit-transition-duration: 500ms;
     transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
     -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-    transition-delay: 1s;
+    /* transition-delay: 1s; */
     opacity: 0;
 }
 
@@ -3931,7 +3931,7 @@ ul.more-sol-inner li span.more-sol-color {
     -webkit-transition-duration: 500ms;
     transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
     -webkit-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
-    transition-delay: 1s;
+    /* transition-delay: 1s; */
     /*opacity: 0;*/
 }
 
