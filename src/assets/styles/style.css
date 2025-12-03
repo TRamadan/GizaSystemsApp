@@ -69,6 +69,7 @@ theme.
     outline: none !important;
 }
 
+html,
 body {
     margin: 0;
     padding: 0;
@@ -77,6 +78,16 @@ body {
     text-rendering: optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
     background: #222327;
+    /* Remove scrollbar and prevent page scrolling */
+
+    scrollbar-width: none;      /* Firefox */
+    -ms-overflow-style: none;   /* IE and old Edge */
+}
+
+/* Chrome / Safari / Edge (WebKit) */
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
 
 
@@ -758,16 +769,15 @@ textarea {
 }
 
 .site-navigation .inner ul li a {
-    font-size: 51px;
+     font-size: 50px;
     display: inline-block;
+    font-weight: 500;
+    font-family: sans-serif;
     color: #fff;
-    letter-spacing: -1.5px !important;
-    font-family: system-ui;
     -webkit-transition: 0.25s ease-in-out;
     -moz-transition: 0.25s ease-in-out;
     -ms-transition: 0.25s ease-in-out;
     -o-transition: 0.25s ease-in-out;
-    font-weight: 500 !important;
     transition: 0.25s ease-in-out;
 }
 
@@ -4136,4 +4146,8 @@ section.blog.publications-wrapper .col-12 figure.postbrochure img {
 
 #events-listing>div>figure>figcaption>ul>li>span>i {
     margin-right: 10px;
+}
+
+body.hamburger.is-opened-navi {
+    overflow: hidden;
 }

@@ -196,6 +196,8 @@ input[type=email] {
     padding: 14px 28px;
     background: #2e2e2e;
     border: 1px solid #ffffff;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
     color: #fff;
 }
 
