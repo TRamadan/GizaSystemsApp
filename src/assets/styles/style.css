@@ -723,8 +723,8 @@ textarea {
 
 .site-navigation .inner ul li {
     display: block;
-    margin: 6px 0;
-    padding: 3px 0;
+    margin: 5px 0;
+    padding: 5px 0;
 
 }
 
@@ -759,21 +759,21 @@ textarea {
     width: 100%;
     display: block;
     color: #fff;
-    opacity: 0.8;
-    letter-spacing: 0.9px;
-    word-spacing: -1px;
-    font-size: 10px;
-    transform: translateY(-18px);
-    margin: 0;
-    -webkit-font-smoothing: antialiased;
+    opacity: 0.7;
+    letter-spacing: 0.5px;
+    font-size: 11px;
+    font-weight: 300;
+    transform: translateY(-15px);
+
 }
 
 .site-navigation .inner ul li a {
-     font-size: 50px;
+    font-size: 50px;
     display: inline-block;
-    font-weight: 500;
-    font-family: sans-serif;
     color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    font-family: sans-serif;
     -webkit-transition: 0.25s ease-in-out;
     -moz-transition: 0.25s ease-in-out;
     -ms-transition: 0.25s ease-in-out;
@@ -4128,7 +4128,7 @@ section.blog.publications-wrapper .col-12 figure.postbrochure img {
 
     .site-navigation .inner ul li small {
         font-size: 10px;
-        margin-top: 10px;
+        margin-top: 16px;
     }
 
     .hamburger__line {
