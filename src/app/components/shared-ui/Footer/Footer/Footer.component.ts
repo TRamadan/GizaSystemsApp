@@ -44,11 +44,15 @@ export class FooterComponent implements OnInit {
     new Swiper('.sub-slider-footer', {
       slidesPerView: 3,
       spaceBetween: 40,
-      loop: true,
+      // loop: true,
+      speed: 1000,
       autoplay: {
         delay: 1500,
-        disableOnInteraction: false
+        disableOnInteraction: false,
       },
+      // effect: 'slide',
+      // grabCursor: true,
+      // centeredSlides: false,
       breakpoints: {
         320: { slidesPerView: 2, spaceBetween: 20 },
         768: { slidesPerView: 3, spaceBetween: 30 },
