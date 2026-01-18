@@ -296,3 +296,8 @@ button[type=submit] {
         font-size: 7vw;
     }
 }
+.swiper-slide.cus {
+  width: 190.667px !important;
+  margin-right: 40px !important;
+  height: 49.86px !important;
+}

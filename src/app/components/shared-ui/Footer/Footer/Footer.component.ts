@@ -40,14 +40,14 @@ export class FooterComponent implements OnInit {
     // Component initialization
   }
 
-   ngAfterViewInit() {
-    new Swiper('.sub-slider-footer', {
+      ngAfterViewInit() {
+      new Swiper('.sub-slider-footer', {
       slidesPerView: 3,
       spaceBetween: 40,
       // loop: true,
-      speed: 1000,
+      speed: 3000,
       autoplay: {
-        delay: 1500,
+        delay: 2000,
         disableOnInteraction: false,
       },
       // effect: 'slide',
